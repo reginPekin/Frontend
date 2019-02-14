@@ -118,7 +118,7 @@ h1 {
 
 Простейшая HTML-страница состоит как минимум из трёх тегов. 
 
-Тег <u><span style = "color: lightblue">'html'</span></u> — это контейнер, в котором находится всё содержимое страницы, включая теги <u><span style="color:lightblue">'head'</span></u> и <u><span style="color:lightblue">'body'</span></u>. Как правило, тег <u><span style="color:lightblue">'html'</span></u> идёт в документе вторым после доктайпа.
+Тег <u>'html'</u> — это контейнер, в котором находится всё содержимое страницы, включая теги <u><span style="color:lightblue">'head'</span></u> и <u><span style="color:lightblue">'body'</span></u>. Как правило, тег <u><span style="color:lightblue">'html'</span></u> идёт в документе вторым после доктайпа.
 
 Тег <u><span style="color:lightblue">'head'</span> </u>предназначен для хранения других элементов, цель которых — помочь браузеру в работе с данными. Содержимое этого тега не отображается напрямую.
 
