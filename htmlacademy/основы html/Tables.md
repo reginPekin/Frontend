@@ -305,3 +305,78 @@ table {
 ```
 К счастью, редко нужно задавать размеры каждой ячейки. Обычно размеры ячеек прописывают, когда надо вручную установить ширину столбцов таблицы: для этого достаточно задать ширину для каждой ячейки из первой строки.
 
+## Испытание: итоговая таблица
+HTML:
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Испытание: итоговая таблица</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Итоговая таблица</h1>
+    <table>
+    <tr>
+      <th style = "text-align:left">Город
+      <th  style = "background-color: lightblue" class = "center">Посещений
+      <th class = "right">%
+    <tr>
+      <td>СПб
+      <td class = "center">199
+      <td class = "right">65.12
+    <tr style = "background-color: lightyellow">
+      <td>Москва
+      <td class = "center">69
+      <td class = "right">21.3
+    <tr>
+      <td>Киев
+      <td class = "center">5
+      <td class = "right">8
+    <tr style = "background-color: lightyellow">
+      <td colspan = "2">Посещений за весь период
+      <td class = "right">273
+    </table>
+  </body>
+</html>
+```
+CSS:
+```css
+body {
+  width: 350px;
+  margin: 0;
+  padding: 0 10px;
+
+  font-size: 14px;
+  font-family: "Arial", sans-serif;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 10px;
+  width: 33%;
+  background-color: darkcyan;
+  color: white;
+}
+
+td {
+  border-bottom: 1px solid lightgrey;
+  padding: 10px;
+}
+```
+
