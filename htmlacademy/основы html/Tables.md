@@ -65,3 +65,71 @@ td {
 * или c помощью CSS-свойства **border-spacing**.
 
 Отметим, что свойство *border-spacing* задаётся для таблицы, в отличие от *padding*, которое задаётся для ячеек.
+
+## Испытание: простая, но аккуратная таблица
+
+HTML:
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Простая, но аккуратная таблица</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Посещения по городам</h1>
+    <table>
+
+    <tr>
+      <td>Город   
+      <td>Посещения   
+      <td>Страниц     
+      <td>Время
+    </tr>
+    
+    <tr>
+     <td> СПб     
+     <td>199         
+     <td>18,02       
+     <td>00:13:45  
+    </tr>
+    
+    <tr>
+        <td>Москва  
+        <td>69          
+        <td>1,48        
+        <td>00:00:44 
+    </tr>
+    
+    <tr>
+        <td>Киев    
+        <td>5           
+        <td>13,43       
+        <td>00:18:07 
+    </tr>
+    </table>
+  </body>
+</html>
+```
+CSS: 
+```css
+body {
+    width: 350px;
+    margin: 0;
+    padding: 0 10px;
+
+    font-size: 14px;
+    font-family: "Arial", sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    border-collapse: collapse;
+    border-bottom: 2px solid lightgray;
+    padding: 10px;
+  }
+```
