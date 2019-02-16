@@ -146,3 +146,35 @@ https://www.google.com/search?q=htmlacademy
 
 Чекбокс не подразумевает выбор одного элемента из нескольких. Поэтому если в одной форме есть несколько чекбоксов, то имена у них должны быть *разными*.
 
+## Испытание: форма регистрации
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Испытание: форма регистрации</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Регистрация</h1>
+
+    <form action="https://echo.htmlacademy.ru" method="post">
+      <label for = "text-field"> Ваш логин (email): </label> <br>
+      <input type = "text" id = "text-field" name = "text-field"> <br> 
+
+      <label for = "password">Пароль:</label> <br>
+      <input type = "password" name = "password-field" id = "password"> <br>
+
+      <label for = "text">Информация о себе: </label><br>
+      <textarea type = "text" rows = "3" id = "text"></textarea><br>
+
+      <input type = "checkbox" name = " check" id="check" checked>
+      <label for = "check">Подписаться на рассылку</label> <br>
+      
+      <input type = "submit" name = "bottom" value = "Зарегистрироваться">
+      
+    </form>
+  </body>
+</html>
+```
