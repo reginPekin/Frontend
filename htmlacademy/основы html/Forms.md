@@ -238,4 +238,56 @@ https://www.google.com/search?q=htmlacademy
 
 Кстати, внешний вид таких полей очень сильно отличается в зависимости от операционной системы и очень плохо изменяется с помощью стилей.
 
+## Скрытое поле
 
+И ещё одно невидимое и очень полезное поле. Это скрытое поле. Его используют, когда в форме нужно отправить какие-то дополнительные служебные данные, которые не вводятся пользователем.
+
+Например, это могут быть реквизиты заказа или номер пользователя в форме оплаты.
+
+Скрытое поле — это тег __'input'__ с типом __hidden__.
+
+## Испытание: редактирование профиля
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Испытание: редактирование профиля</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Профиль</h1>
+
+    <form action="https://echo.htmlacademy.ru" method="post" enctype = "multipart/form-data">
+      Ваш пол: 
+      <input type = "radio" name="sex" value = "men"> Мужской
+      <input type = "radio" checked name = "sex" value = "fem"> Женский
+      <br>
+
+      <label for="year">Месяц и год рождения:</label> <br>
+      
+      <select id = "year" name = "month"> 
+        <option>Январь</option>
+      </select> 
+
+      <select id = "year" name = "year">
+        <option>1990<option>
+      </select> <br>
+
+      <label for = "tech">Знакомые технологии:</label> <br>
+      <select id = "tech" multiple>
+        <option>HTML</option>
+        <option selected>CSS</option>
+        <option>JavaScript</option>
+        <option>Node.js</option> 
+      </select> <br>
+
+      <label for = "avatar">Фото:</label> 
+      <input type = "file" value = "Choose File" name = "Choose File" id = "avatar">
+
+      <input type = "submit" value = "Сохранить">
+    </form>
+  </body>
+</html>
+```
