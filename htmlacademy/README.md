@@ -1,4 +1,4 @@
-# Frontend
+# HTMLACADEMY
 
 Здесь вы можете найти конспект курса "Основы HTML" от <a href = "https://htmlacademy.ru"> htmlacademy </a>
 
