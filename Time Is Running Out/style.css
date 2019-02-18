@@ -1,0 +1,33 @@
+.header {
+    background-color: #F9989F;
+    color: rgb(177, 33, 64);
+}
+
+.information {
+    background-color: #FCCB8F;
+    width: 29.3%;
+    height: 91%;
+    position: absolute;
+    left: 70%;
+    top: 8%;
+}
+
+.information table{
+    
+    left: 1%;
+    width: 95%;
+    height: 92%;
+    top: 1%;
+    
+}
+
+.information caption{
+    color: #e21530;
+    font-size: 30px;
+}
+
+.information td{
+    border-bottom: 2px solid #da5a27;
+    color: #da5a27;
+    vertical-align: bottom;
+}
