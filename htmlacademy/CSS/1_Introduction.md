@@ -93,3 +93,97 @@ h1 {
 Например, все элементы внутри тега __body__ являются дочерними по отношению к нему. Если для __body__ в стилях задать цвет текста красным, то цвет всех остальных элементов тоже станет красным.
 
 Ещё пример: тег __ul__ является родительским по отношению к вложенным в него тегам __li__. Если задать для __ul__ шрифт курсивом, то и внутри всех __li__ шрифт станет курсивным.
+
+## Ненаследуемые свойства
+
+Наследование работает не для всех свойств. Некоторые свойства применяются только к самому элементу и не переходят к его потомкам.
+
+К таким ненаследуемым свойствам относятся: ширина, высота, отступы, режим позиционирования и другие. Согласитесь, было бы странно задать отступы для __body__ и обнаружить, что у всех вложенных элементов тоже появились отступы.
+
+пользованные цвета: #ffffff и #333333.
+Для одного элемента нужно будет изменить размер шрифта, для этого используйте свойство font-size.
+Значения отступов, ширины блоков, а также неизвестных размеров шрифта кратны 10,
+Свойства для позиционирования position, top, left и другие не использовались.
+
+## Испытание: макет-прототип
+
+```css
+body {
+  width: 450px;
+  margin: 0;
+  padding: 10px;
+
+  font-size: 14px;
+  font-family: "Arial", sans-serif;
+}
+
+.logo,
+.contacts,
+.about-us,
+.main-menu,
+.footer {
+  padding: 10px 20px 10px 20px;
+
+  background-color: #f5f5f5;
+  border: 2px solid #cccccc;
+}
+
+.header {
+  min-height: 40px;
+  margin-bottom: 20px;
+}
+
+.logo {
+  float: left;
+  width: 100px;
+
+  text-align: center;
+  background-color: #333333;
+  color: #ffffff;
+  width: 230px;
+  font-weight: bold;
+}
+
+.contacts {
+  float: right;
+  width: 110px;
+
+  text-align: center;
+  background-color: #333333;
+  color: #ffffff;
+  font-style: italic;
+}
+
+.about-us {
+  width: 200px;
+  margin-bottom: 10px;
+  width: 230px;
+  position: left;
+  font-size: 10px;
+}
+
+.about-us h1 {
+
+}
+
+.about-us p {
+  font-size: 12px;
+  
+}
+
+.main-menu {
+  width: 50px;
+  position: absolute;
+  left: 306px;
+  top: 70px;
+  width: 110px;
+}
+
+.footer {
+  background-color: #333333;
+  color: #ffffff;
+  position: absolute;
+  top: 258px;
+  width: 406px;
+}
+```
