@@ -105,3 +105,117 @@ CSS-правила существуют как минимум в трёх раз
 <img src = "https://i.ibb.co/F08982D/2019-02-20-1-05-38.png" width = "250">
 
 Отсюда сразу видно, что в нашем примере самым приоритетным является селектор **#floor .cat-in-box**.
+
+## Испытание: взломанный котопрофайл
+
+```css
+html,
+body {
+margin: 0;
+padding: 0;
+}
+
+body {
+width: 550px;
+height: 300px;
+font-size: 12px;
+font-family: "Tahoma", "Arial", sans-serif;
+}
+
+.profile {
+padding: 5px 10px;
+}
+
+.profile img {
+display: block;
+padding: 10px;
+border: 2px solid #34495e;
+border-radius: 8px;
+}
+
+.profile .photo {
+float: left;
+width: 152px;
+}
+
+.profile .info {
+float: left;
+width: 368px;
+margin-left: 10px;
+}
+
+.info #info-title, 
+h2 {
+margin: 0 !important;
+padding: 10px !important;
+
+font-weight: normal;
+font-size: 12px;
+color: #ffffff;
+background: #34495e;
+border-radius: 4px;
+}
+
+.info div.fact {
+padding: 10px;
+background: white;
+}
+
+.info div.fact:nth-child(odd) {
+background: #ecf0f1;
+}
+
+.info .fact:after {
+content: "";
+display: table;
+clear: both;
+}
+
+.info .fact .title {
+float: left;
+width: 120px;
+text-align: right;
+color: #7f8c8d;
+}
+
+.info .fact .value {
+margin-left: 140px;
+color: #34495e;
+}
+
+.albums {
+margin-top: 5px;
+}
+
+.albums img {
+float: left;
+margin-right: 5px !important;
+}
+
+.albums img:last-child {
+margin-right: 0 !important;
+}
+
+.photo .button {
+display: block;
+height: 30px;
+margin: 5px 0;
+
+line-height: 30px;
+text-align: center;
+color: #ffffff;
+border-radius: 4px;
+}
+
+.photo .stroke {
+background: #3498db;
+}
+
+.photo .feed {
+background: #2ecc71;
+}
+
+.photo .startle {
+background: #e74c3c;
+}
+```
