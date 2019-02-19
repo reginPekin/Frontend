@@ -213,4 +213,165 @@ input:focus {
 *Использование селекторов по id при оформлении считается плохой практикой. Существуют редкие исключения из этого правила, например, при оживлении слайдера на чистом CSS.*
 
 
+## Испытание: Дуэль
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Испытание. Дуэль</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="shooter-1">
+      <ul class="target">
+        <li>
+          <div class="hitbox"></div>
+          <div class="lever"><span></span></div>
+        </li>
+        <li class="miss">
+          <div class="hitbox"></div>
+          <div class="lever"><span></span></div>
+        </li>
+        <li class="miss">
+          <div class="hitbox"></div>
+          <div class="lever"><span></span></div>
+        </li>
+        <li>
+          <div class="hitbox"></div>
+          <div class="lever"><span></span></div>
+        </li>
+        <li class="miss">
+          <div class="hitbox"></div>
+          <div class="lever"><span></span></div>
+        </li>
+      </ul>
+    </div>
+    <div class="shooter-2">
+      <ul class="target">
+        <li>
+          <div class="hitbox"></div>
+          <div class="lever"><span></span></div>
+        </li>
+        <li>
+          <div class="hitbox"></div>
+          <div class="lever"><span></span></div>
+        </li>
+        <li>
+          <div class="hitbox"></div>
+          <div class="lever"><span></span></div>
+        </li>
+        <li>
+          <div class="hitbox"></div>
+          <div class="lever"><span></span></div>
+        </li>
+        <li>
+          <div class="hitbox"></div>
+          <div class="lever"><span></span></div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
+```
+
+```css
+ body {
+  width: 280px;
+  margin: 0;
+  padding: 0;
+}
+
+.shooter-1 {
+  padding: 55px 0 55px 0;
+
+  background-color: #fcf8e3;
+  border-bottom: 1px dashed #cccccc;
+}
+
+.shooter-2 {
+  padding: 55px 0 55px 0;
+
+  background-color: #d9edf7;
+}
+
+.shooter-1 ul, .shooter-2 ul {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  height: 25px;
+  margin: 0 auto;
+  padding: 10px 15px 10px 15px;
+  overflow: hidden;
+
+  list-style: none;
+
+  background-color: white;
+  border-radius: 2px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+.shooter-1 li, .shooter-2 li {
+  position: relative;
+
+  width: 22px;
+  height: 22px;
+
+  font-size: 0;
+
+  background-color: #333333;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+.shooter-1 .hitbox, .shooter-2 .hitbox {
+  width: 10px;
+  height: 10px;
+  margin: 6px auto;
+
+  background-color: #999999;
+  border-radius: 50%;
+}
+
+.shooter-1 .lever, .shooter-2 .lever{
+  position: absolute;
+  top: -2px;
+  left: -2px;
+
+  width: 26px;
+  height: 26px;
+
+  background-color: #f5f5f5;
+  border-radius: 50%;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.shooter-1 .lever>span, .shooter-2 span {
+  position: absolute;
+  top: 12px;
+  left: 11px;
+
+  width: 5px;
+  height: 25px;
+
+  background-color: #f5f5f5;
+  box-shadow: -1px 15px 2px rgba(0, 0, 0, 0.3), 1px 15px 2px rgba(0, 0, 0, 0.3);
+}
+
+.shooter-1 .miss .lever{
+  display: none;
+}
+
+.shooter-2 li:nth-child(1) .lever{
+  display: none;
+}
+
+.shooter-2 li:nth-child(4) .lever {
+  display: none;
+}
+.shooter-2 li:nth-child(5) .lever {  display: none;
+}
+```
+
 
