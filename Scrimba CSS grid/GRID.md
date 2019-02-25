@@ -9,8 +9,8 @@
         <style>
             .container {
                 display: grid;
-                grid-template-columns: 100px auto;
-                grid-template-rows: 50px 50px 200px;
+                grid-template-columns: 100px auto 100px; /* three column */
+                grid-template-rows: 50px 50px;
                 grid-gap: 3px;
             }
         </style>
@@ -28,7 +28,11 @@
 </html>
 ```
 
+<img src="https://i.ibb.co/N9vtFRW/2019-02-25-23-23-18.png">
+
 Let look at the ```.container```:
 * ```display:grid``` - An HTML element becomes a grid container by setting the display property to grid or inline-grid.
-
+* ```grid-template-columns: values``` - defines how many columns and how wide we want them to be
+* ```grid-template-rows: values``` - defines the number of raws and they height
+* ```grid-gap: value``` - makes gabes between the items;
  
