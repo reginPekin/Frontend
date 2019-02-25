@@ -28,7 +28,7 @@
 </html>
 ```
 
-<img src="https://i.ibb.co/N9vtFRW/2019-02-25-23-23-18.png">
+<img src="https://i.ibb.co/N9vtFRW/2019-02-25-23-23-18.png" width = 250px>
 
 Let look at the ```.container```:
 * ```display:grid``` - An HTML element becomes a grid container by setting the display property to grid or inline-grid.
