@@ -28,7 +28,7 @@
 </html>
 ```
 
-Разберём ```.container```:
+Let look at the ```.container```:
 * ```display:grid``` - An HTML element becomes a grid container by setting the display property to grid or inline-grid.
 
  
