@@ -49,6 +49,17 @@ Fraction unit - ```1fr```
     grid-gap: 3px;
 }
 ```
+
+or the same result with repeat:
+
+```css
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 50px 50px;
+    grid-gap: 3px;
+}
+```
 <img src = "https://i.ibb.co/DY2fMpL/2019-02-25-23-29-40.png" width = 350px>
 
 ```css
