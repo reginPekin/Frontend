@@ -38,7 +38,8 @@ Let look at the ```.container```:
  
 
  ## Fraction units and repeat
-
+ 
+With CSS Grid Layout, we get a new flexible unit: the Fr unit. Fr is a fractional unit and 1fr is for 1 part of the available space. 
 Fraction unit - ```1fr```
 
 ```css
@@ -56,7 +57,16 @@ or the same result with repeat:
 .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 50px 50px;
+    grid-template-rows: repeat(2, 50px);
+    grid-gap: 3px;
+}
+```
+
+or:
+```css
+.container {
+    display: grid;
+    grid-template: repeat(2, 50px) / repeat(3, 1fr);
     grid-gap: 3px;
 }
 ```
