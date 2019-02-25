@@ -28,7 +28,7 @@
 </html>
 ```
 
-<img src="https://i.ibb.co/N9vtFRW/2019-02-25-23-23-18.png" width = 250px>
+<img src="https://i.ibb.co/N9vtFRW/2019-02-25-23-23-18.png" width = 350px>
 
 Let look at the ```.container```:
 * ```display:grid``` - An HTML element becomes a grid container by setting the display property to grid or inline-grid.
@@ -36,3 +36,27 @@ Let look at the ```.container```:
 * ```grid-template-rows: values``` - defines the number of raws and they height
 * ```grid-gap: value``` - makes gabes between the items;
  
+
+ ## Fraction units and repeat
+
+Fraction unit - ```1fr```
+
+```css
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 50px;
+    grid-gap: 3px;
+}
+```
+<img src = "https://i.ibb.co/DY2fMpL/2019-02-25-23-29-40.png" width = 350px>
+
+```css
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 50px 50px;
+    grid-gap: 3px;
+}
+```
+<img src = "https://i.ibb.co/ZNCn8Y5/2019-02-25-23-30-18.png" width = 350px>
