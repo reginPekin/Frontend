@@ -145,3 +145,5 @@ or
     grid-column: 1 / span 2;
 }
 ```
+
+<img src = "https://i.ibb.co/bP6jPN3/2019-02-25-23-56-14.png" width = 350px>
