@@ -147,3 +147,30 @@ or
 ```
 
 <img src = "https://i.ibb.co/bP6jPN3/2019-02-25-23-56-14.png" width = 350px>
+
+One more example: 
+```css
+.container {
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 40px 200px 40px;
+}
+
+.header {
+    grid-column: 2 / -1;
+}
+
+.menu {
+    grid-row: 1 / 3;
+}
+
+.content {
+    grid-column: 2 / -1;
+}
+
+.footer {
+    grid-column: 1 / -1;
+}
+```
+<img src = "https://i.ibb.co/X79MGfQ/2019-02-26-0-51-11.png" width = 350px>
