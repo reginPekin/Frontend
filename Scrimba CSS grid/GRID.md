@@ -122,4 +122,26 @@ if we add
     grid-column-end: 3;
 }
 ```
+or 
+```css
+.header {
+    grid-column: 1 / 3;
+}
+```
 <img src = "https://i.ibb.co/FgQcszT/2019-02-25-23-53-12.png" width = 350px>
+
+more addition
+
+```css
+.footer {
+    grid-column: 1 / -1;
+}
+```css
+
+or
+
+```css
+.footer {
+    grid-column: 1 / span 2;
+}
+```
