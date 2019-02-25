@@ -1,0 +1,34 @@
+# Learn CSS grig
+
+## First step 
+
+```html
+<html>
+    <head>
+        <link rel="stylesheet" href="basic.css">
+        <style>
+            .container {
+                display: grid;
+                grid-template-columns: 100px auto;
+                grid-template-rows: 50px 50px 200px;
+                grid-gap: 3px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+    </body>
+</html>
+```
+
+Разберём ```.container```:
+* ```display:grid``` - An HTML element becomes a grid container by setting the display property to grid or inline-grid.
+
+ 
