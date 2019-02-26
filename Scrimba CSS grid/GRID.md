@@ -239,3 +239,23 @@ Result:
 
 Result: 
 <img src = "https://i.ibb.co/N3fsSfC/2019-02-26-21-35-05.png" width = 350px>
+
+Данный метод хорош тем, что позволяет легко менять расположение блоков, к примеру поменяем лишь некоторые буквы:
+
+```css
+.container {
+    height: 100%;
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 40px auto 40px;
+    grid-template-areas: 
+        "m h h h h h h h h h h h"
+        "m c c c c c c c c c c c"
+        "m f f f f f f f f f f f";
+}
+```
+
+Result:
+
+<img src = "https://i.ibb.co/jHcB1c8/2019-02-26-21-39-51.png" width = 350px>
