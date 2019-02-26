@@ -262,7 +262,7 @@ Result:
 
 Dots = empty space
 
-```css
+```
 grid-template-areas: 
         ". h h h h h h h . . . ."
         "m c c c c c c c c c c c"
@@ -272,10 +272,31 @@ grid-template-areas:
 <img src = "https://i.ibb.co/2Zbh0BX/2019-02-26-21-45-26.png" width = 350px>
 
 Примечание: блоки должны быть строго прямоугольны, иначе:
-```css
+```
 grid-template-areas: 
         ". h h h h h h h h h h ."
         "m c c c c c c c c c c c"
         "m m . . f f f f f f f f";
 ```
 <img src = "https://i.ibb.co/vx87Z0g/2019-02-26-21-49-58.png" width = 350px>
+
+## Auto-fit and minimax
+
+```css
+.container {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+    grid-template-rows: repeat(2, 100px);
+}
+```
+
+<img src ="https://i.ibb.co/bH80N8B/2019-02-26-22-21-07.png" width = 350px>
+
+<img src ="https://i.ibb.co/VJdHnjc/2019-02-26-22-22-21.png" width = 350px>
+
+<img src =" " width = 350px>
+
+<img src =" " width = 350px>
+
+<img src =" " width = 350px>
