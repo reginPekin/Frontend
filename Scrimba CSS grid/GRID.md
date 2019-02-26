@@ -270,3 +270,12 @@ grid-template-areas:
 ```
 
 <img src = "https://i.ibb.co/2Zbh0BX/2019-02-26-21-45-26.png" width = 350px>
+
+Примечание: блоки должны быть строго прямоугольны, иначе:
+```css
+grid-template-areas: 
+        ". h h h h h h h h h h ."
+        "m c c c c c c c c c c c"
+        "m m . . f f f f f f f f";
+```
+<img src = "https://i.ibb.co/vx87Z0g/2019-02-26-21-49-58.png" width = 350px>
