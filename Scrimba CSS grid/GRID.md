@@ -293,9 +293,9 @@ grid-template-areas:
 
 <img src ="https://i.ibb.co/bH80N8B/2019-02-26-22-21-07.png" width = 350px>
 
-<img src ="https://i.ibb.co/VJdHnjc/2019-02-26-22-22-21.png" width = 350px>
+<img src ="https://i.ibb.co/VJdHnjc/2019-02-26-22-22-21.png" width = 400px>
 
-<img src =" " width = 350px>
+<img src ="file:///var/folders/rg/npjbv21x0bsb3tl8kg_vmmcr0000gn/T/com.apple.Safari/WebKitDropDestination-UmEdpne4/Снимок%20экрана%202019-02-26%20в%2022.23.59.png" width = 500px>
 
 <img src =" " width = 350px>
 
