@@ -174,3 +174,68 @@ One more example:
 }
 ```
 <img src = "https://i.ibb.co/X79MGfQ/2019-02-26-0-51-11.png" width = 350px>
+
+## Template areas
+
+```css
+.container {
+    height: 100%;
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 40px auto 40px;
+    grid-template-areas: 
+        "h h h h h h h h h h h h"
+        "m c c c c c c c c c c c"
+        "f f f f f f f f f f f f";
+}
+
+.header {
+    grid-area: h;
+}
+
+.menu {
+}
+
+.content {
+}
+
+.footer {
+}
+```
+
+Result: 
+<img src = "https://i.ibb.co/vsWXnyc/2019-02-26-21-33-22.png" width = 350px>
+
+```css
+.container {
+    height: 100%;
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 40px auto 40px;
+    grid-template-areas: 
+        "h h h h h h h h h h h h"
+        "m c c c c c c c c c c c"
+        "f f f f f f f f f f f f";
+}
+
+.header {
+    grid-area: h;
+}
+
+.menu {
+    grid-area: m;
+}
+
+.content {
+    grid-area: c;
+}
+
+.footer {
+    grid-area: f;
+}
+```
+
+Result: 
+<img src = "https://i.ibb.co/N3fsSfC/2019-02-26-21-35-05.png" width = 350px>
