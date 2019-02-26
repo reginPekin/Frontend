@@ -259,3 +259,14 @@ Result:
 Result:
 
 <img src = "https://i.ibb.co/jHcB1c8/2019-02-26-21-39-51.png" width = 350px>
+
+Dots = empty space
+
+```css
+grid-template-areas: 
+        ". h h h h h h h . . . ."
+        "m c c c c c c c c c c c"
+        ". f f f f f f f f f f .";
+```
+
+<img src = "https://i.ibb.co/2Zbh0BX/2019-02-26-21-45-26.png" width = 350px>
