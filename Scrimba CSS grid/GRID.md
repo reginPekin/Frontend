@@ -1,5 +1,16 @@
 # Learn CSS grig
 
+## Table of Contents
+
+1. [First step](#firststep)
+2. [Fraction units and repeat](#repeat)
+3. [Position items](#items)
+4. [Template areas](#areas)
+5. [Auto-fit vs auto-fill](#auto)
+6. [Minmax](#minmax)
+
+<a name="firststep"></a>
+
 ## First step 
 
 ```html
@@ -37,6 +48,7 @@ Let look at the ```.container```:
 * ```grid-gap: value``` - makes gabes between the items;
  
 
+<a name="repeat"></a>
  ## Fraction units and repeat
 
 With CSS Grid Layout, we get a new flexible unit: the Fr unit. Fr is a fractional unit and 1fr is for 1 part of the available space. 
@@ -82,7 +94,7 @@ or:
 ```
 <img src = "https://i.ibb.co/ZNCn8Y5/2019-02-25-23-30-18.png" width = 350px>
 
-
+<a name="items"></a>
 ## Position items
 
 HTML code:
@@ -175,6 +187,7 @@ One more example:
 ```
 <img src = "https://i.ibb.co/X79MGfQ/2019-02-26-0-51-11.png" width = 350px>
 
+<a name="areas"></a>
 ## Template areas
 
 ```css
@@ -297,6 +310,7 @@ grid-template-areas:
 
 <img src ="https://i.ibb.co/FB8WMJV/2019-02-26-22-25-03.png" width = 500px>
 
+<a name="auto"></a>
 ## Auto-fit vs auto-fill 
 
 ```auto-fill``` **FILLS** the row with as many columns as it can fit. So it creates implicit columns whenever a new column can fit, because it's trying to FILL the row with as many columns as it can. The newly added columns can and may be empty, but they will still occupy a designated space in the row.
@@ -308,6 +322,7 @@ Visual example:
 
 Additional resource: [Useful YouTube video "CSS GRID: auto-fit and auto-fill"](https://www.youtube.com/watch?v=asfqwwrXis4)
 
+<a name="minmax"></a>
 ## Minmax
 Two examples without minmax and with minmax:
 
