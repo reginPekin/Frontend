@@ -466,18 +466,13 @@ Cool way:
 
 <img src = "https://i.ibb.co/2ymPxTz/2019-02-27-17-35-18.png" width = 350px>
 
-```css
-
-```
-
-<img src = "" width = 350px>
 
 If we add a new command to ```.contaiber```:
 
 ```css
- grid-auto-flow: dense;
- ```
+grid-auto-flow: dense;
+```
 
- we will get: 
+we will get: 
 
- <img scr = "https://i.ibb.co/Lvnv6vX/2019-02-27-17-39-01.png" width = 350px>
+<img scr = "https://i.ibb.co/Lvnv6vX/2019-02-27-17-39-01.png" width = 350px>
