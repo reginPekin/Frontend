@@ -297,6 +297,12 @@ grid-template-areas:
 
 <img src ="https://i.ibb.co/FB8WMJV/2019-02-26-22-25-03.png" width = 500px>
 
-<img src =" " width = 350px>
+## Auto-fit vs auto-fill 
 
-<img src =" " width = 350px>
+```auto-fill``` **FILLS** the row with as many columns as it can fit. So it creates implicit columns whenever a new column can fit, because it's trying to FILL the row with as many columns as it can. The newly added columns can and may be empty, but they will still occupy a designated space in the row.
+
+```auto-fit``` **FITS** the CURRENTLY AVAILABLE columns into the space by expanding them so that they take up any available space. The browser does that after FILLING that extra space with extra columns (as with auto-fill ) and then collapsing the empty ones.
+
+<img src = "https://i.ibb.co/NCM1WXS/2019-02-27-5-28-46.png" width = 350px>
+
+Additional resource: [Useful YouTube video "CSS GRID: auto-fit and auto-fill"](https://www.youtube.com/watch?v=asfqwwrXis4)
