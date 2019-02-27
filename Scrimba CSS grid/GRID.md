@@ -12,6 +12,7 @@
 8. [Implicit rows](#implicit)
 9. [An awesome image grid](#imagegrid)
 10. [Named lines](#namedlines)
+11. [Justify-content and align-content](#justify)
 
 <a name="firststep"></a>
 
@@ -382,7 +383,7 @@ Cool way:
 ```
 <img src = "https://i.ibb.co/Bq4WFr4/2019-02-27-16-31-31.png" width = 350px>
 
-<a name = "image_grid"></a>
+<a name = "imagegrid"></a>
 
 ## An awesome image grid
 
@@ -510,3 +511,40 @@ we will get:
 
 *Here you can find more useful and clearer information: [Layout using named grid lines
 ](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)*
+
+<a name = "justify"></a>
+
+## Justify-content and align-content
+
+```css
+.container {
+    border: 1px solid black;
+    height: 100%;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(2, 100px);
+    justify-content: center;
+    align-content: end;
+}
+```
+
+<img src = "https://i.ibb.co/YdhZLWd/2019-02-27-20-19-13.png" width = 350px>
+
+```css
+.container {
+    border: 1px solid black;
+    height: 100%;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(2, 100px);
+    justify-content: space-evenly;
+    align-content: center;
+}
+```
+
+<img src = "https://i.ibb.co/1fv4btG/2019-02-27-20-20-52.png" width = 350px>
+
+*Here you can find more useful and clearer information: [Box alignment in CSS Grid Layout
+](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)*
