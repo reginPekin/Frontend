@@ -11,7 +11,7 @@
 7. [Minmax](#minmax)
 8. [Implicit rows](#implicit)
 9. [An awesome image grid](#imagegrid)
-10. [Named lines] (#namedlines)
+10. [Named lines](#namedlines)
 
 <a name="firststep"></a>
 
@@ -508,5 +508,5 @@ we will get:
 
 <img src = "https://i.ibb.co/NpL66ps/2019-02-27-19-36-38.png" width = 350px>
 
-Here you can find more useful and clearer information: [Layout using named grid lines
-](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
+*Here you can find more useful and clearer information: [Layout using named grid lines
+](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)*
