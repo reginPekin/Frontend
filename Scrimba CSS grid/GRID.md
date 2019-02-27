@@ -475,4 +475,4 @@ grid-auto-flow: dense;
 
 we will get: 
 
-<img scr = "https://i.ibb.co/Lvnv6vX/2019-02-27-17-39-01.png" width = 350px>
+<img src = "https://i.ibb.co/Lvnv6vX/2019-02-27-17-39-01.png" width = 350px>
