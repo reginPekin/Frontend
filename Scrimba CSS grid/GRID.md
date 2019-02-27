@@ -10,7 +10,8 @@
 6. [Auto-fit vs auto-fill](#auto)
 7. [Minmax](#minmax)
 8. [Implicit rows](#implicit)
-9. [An awesome image grid](#image_grid)
+9. [An awesome image grid](#imagegrid)
+10. [Named lines] (#namedlines)
 
 <a name="firststep"></a>
 
@@ -476,3 +477,36 @@ grid-auto-flow: dense;
 we will get: 
 
 <img src = "https://i.ibb.co/Lvnv6vX/2019-02-27-17-39-01.png" width = 350px>
+
+<a name = "namedlines"></a>
+
+## Named lines
+
+```css
+.container {
+    height: 100%; 
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: [main-start] 1fr [content-start] 5fr [content-end main-end];
+    grid-template-rows: [main-start] 40px [content-start] auto [content-end] 40px [main-end]; 
+}
+
+.header {
+    grid-column: main;
+}
+
+.menu {}
+
+.content {
+    grid-area: content;
+}
+
+.footer {
+    grid-column: main;
+}
+```
+
+<img src = "https://i.ibb.co/NpL66ps/2019-02-27-19-36-38.png" width = 350px>
+
+Here you can find more useful and clearer information: [Layout using named grid lines
+](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
