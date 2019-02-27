@@ -6,8 +6,11 @@
 2. [Fraction units and repeat](#repeat)
 3. [Position items](#items)
 4. [Template areas](#areas)
-5. [Auto-fit vs auto-fill](#auto)
-6. [Minmax](#minmax)
+5. [Auto-fit and minmax](#AaF)
+6. [Auto-fit vs auto-fill](#auto)
+7. [Minmax](#minmax)
+8. [Implicit rows](#implicit)
+9. [An awesome image grid](#image_grid)
 
 <a name="firststep"></a>
 
@@ -292,6 +295,7 @@ grid-template-areas:
         "m m . . f f f f f f f f";
 ```
 <img src = "https://i.ibb.co/vx87Z0g/2019-02-26-21-49-58.png" width = 350px>
+<a name="AaF"></a>
 
 ## Auto-fit and minimax
 
@@ -311,6 +315,7 @@ grid-template-areas:
 <img src ="https://i.ibb.co/FB8WMJV/2019-02-26-22-25-03.png" width = 500px>
 
 <a name="auto"></a>
+
 ## Auto-fit vs auto-fill 
 
 ```auto-fill``` **FILLS** the row with as many columns as it can fit. So it creates implicit columns whenever a new column can fit, because it's trying to FILL the row with as many columns as it can. The newly added columns can and may be empty, but they will still occupy a designated space in the row.
@@ -323,6 +328,7 @@ Visual example:
 Additional resource: [Useful YouTube video "CSS GRID: auto-fit and auto-fill"](https://www.youtube.com/watch?v=asfqwwrXis4)
 
 <a name="minmax"></a>
+
 ## Minmax
 Two examples without minmax and with minmax:
 
@@ -347,3 +353,131 @@ Two examples without minmax and with minmax:
 ```
 
 <img src = "https://i.ibb.co/R9vfv8b/2019-02-27-5-46-16.png" width = 350px>
+
+<a name = "implicit"></a>
+
+## Implicit rows
+
+Wrong way: 
+
+```css
+.container {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-rows: 100px 100px;
+}
+```
+Cool way: 
+<img src = "https://i.ibb.co/zHgj0p6/2019-02-27-16-30-57.png" width = 350px>
+
+```css
+.container {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-auto-rows: 100px;
+}
+```
+<img src = "https://i.ibb.co/Bq4WFr4/2019-02-27-16-31-31.png" width = 350px>
+
+<a name = "image_grid"></a>
+
+## An awesome image grid
+
+```html
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="basic.css">
+    </head>
+    <body>
+        <div class="container">
+            <div><img src="img/normal1.jpg"/></div>
+            <div class="vertical"><img src="img/vertical1.jpg"/></div>
+            <div class="horizontal"><img src="img/horizontal1.jpg"/></div>
+            <div><img src="img/normal2.jpg"/></div>
+            <div><img src="img/normal3.jpg"/></div>
+            <div class="big"><img src="img/big1.jpg"/></div>
+            <div><img src="img/normal4.jpg"/></div>
+            <div class="vertical"><img src="img/vertical2.jpg"/></div>
+            <div><img src="img/normal5.jpg"/></div>
+            <div class="horizontal"><img src="img/horizontal2.jpg"/></div>
+            <div><img src="img/normal6.jpg"/></div>
+            <div class="big"><img src="img/big2.jpg"/></div>
+            <div><img src="img/normal7.jpg"/></div>
+            <div class="horizontal"><img src="img/horizontal3.jpg"/></div>
+            <div><img src="img/normal8.jpg"/></div>
+            <div class="big"><img src="img/big3.jpg"/></div>
+            <div><img src="img/normal9.jpg"/></div>
+            <div class="vertical"><img src="img/vertical3.jpg"/></div>
+        </div>
+    </body>
+</html>
+```
+
+```css
+.container {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-auto-rows: 75px;
+}
+
+.horizontal {}
+
+.vertical {}
+
+.big {}
+}
+```
+
+<img src = "https://i.ibb.co/DCSyhSv/2019-02-27-17-20-02.png" width = 350px>
+
+```css
+.container {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-auto-rows: 75px;
+}
+
+.horizontal {
+    grid-column: span 2;
+}
+```
+
+<img src = "https://i.ibb.co/Q8Jjg4R/2019-02-27-17-24-23.png" width = 350px>
+
+```css
+.vertical {
+    grid-row: span 2;
+}
+```
+
+<img src = "https://i.ibb.co/4Mf1LVQ/2019-02-27-17-33-59.png" width = 350px>
+
+```css
+.big {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+```
+
+<img src = "https://i.ibb.co/2ymPxTz/2019-02-27-17-35-18.png" width = 350px>
+
+```css
+
+```
+
+<img src = "" width = 350px>
+
+If we add a new command to ```.contaiber```:
+
+```css
+ grid-auto-flow: dense;
+ ```
+
+ we will get: 
+
+ <img scr = "https://i.ibb.co/Lvnv6vX/2019-02-27-17-39-01.png" width = 350px>
