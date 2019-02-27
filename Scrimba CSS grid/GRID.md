@@ -303,6 +303,32 @@ grid-template-areas:
 
 ```auto-fit``` **FITS** the CURRENTLY AVAILABLE columns into the space by expanding them so that they take up any available space. The browser does that after FILLING that extra space with extra columns (as with auto-fill ) and then collapsing the empty ones.
 
+Visual example: 
 <img src = "https://i.ibb.co/NCM1WXS/2019-02-27-5-28-46.png" width = 350px>
 
 Additional resource: [Useful YouTube video "CSS GRID: auto-fit and auto-fill"](https://www.youtube.com/watch?v=asfqwwrXis4)
+
+## Minmax
+Two examples without minmax and with minmax:
+
+```css
+.container {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, 100px);
+    grid-template-rows: repeat(2, 100px);
+}
+
+```
+<img src = "https://i.ibb.co/n6LwB2q/2019-02-27-5-45-21.png" width = 350px>
+
+```css
+.container {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: repeat(2, 100px);
+}
+```
+
+<img src = "https://i.ibb.co/R9vfv8b/2019-02-27-5-46-16.png" width = 350px>
