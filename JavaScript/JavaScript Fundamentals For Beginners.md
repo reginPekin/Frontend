@@ -144,3 +144,102 @@ __FOR_EACH__:
     }
 </script>
 ```
+
+## Object
+
+```html
+<script>
+// Object literal
+
+var person = {
+    firstName: 'Brad',
+    lastName: 'Traversy',
+    age: 34;
+    children: ['Brianna', 'Nicolas']
+    address: {
+        street: '555 street',
+        city: 'Boston', 
+        state: 'MA'
+    }
+    fullName: function(){
+        retirn: this.firstname + " " + this.lastName;
+    }
+}
+
+console.log([person.address.state])
+</script>
+'''
+
+
+'''html
+<script>
+// Object Cunstuctor
+
+var apple = new Object()
+apple.color = 'red';
+apple.shape = 'round';
+
+apple.describe = function(){
+    return 'An apple is the color ' + this.color + ' and is the shape' + this.shape;
+}
+
+console.log(apple.describe);
+</script>
+```
+
+
+```html
+<script>
+// Constructor Pattern
+function Fruit(name, color, shape){
+    this.name = name;
+    this.color = color;
+    this.shape = shape;
+    this.describe = function(){
+    return 'A ' + this.name + 'is the color' + this.color + ' and is the shape' + this.shape;
+}
+}
+
+var apple = new fruit('apple','red','round');
+
+var melon = new Fruit('melon', 'green', 'round');
+console.log(melon.describe());
+</script>
+```
+
+More objects:
+
+```html
+<script>
+var users = [
+    {
+        name: 'John Doe',
+        age: 30
+    },
+    {
+        name: 'Regin Begin',
+        age: 21
+    },
+    {
+        name: 'Ivan Divan',
+        age: 20
+    }
+];
+console.log(users[0]);
+</script>
+```
+
+## Events
+
+```html
+<div class="container">
+<button onclick = "doClick()">Click Me</button>
+</div>
+
+<script>
+function doClick(){
+    alert('You Clicked!');
+}
+</script>
+```
+
