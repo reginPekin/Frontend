@@ -91,7 +91,7 @@ __WHILE__:
 </script>
 ```
 
-__FOR_AECH__:
+__FOR_EACH__:
 
 ```html
 <script>
@@ -100,5 +100,47 @@ __FOR_AECH__:
     numbers.forEach(function(number){
         console.log(number);
     });
+</script>
+```
+
+## Conditionals
+
+```html
+<script>
+    var var1 = 3;
+    var var2 = 4;
+    if(var1 == var2) && (var1 == 3){ // sign '===' means equal of 
+        console.log('This is true');
+    } else {
+        console.log('This is false');
+    } // this is false
+
+    var var1 = 3;
+    var var2 = 4;
+    if(var1 == var2) || (var1 == 3){ // sign '===' means equal of 
+        console.log('This is true');
+    } else {
+        console.log('This is false');
+    } // this is true
+</script>
+```
+```html
+<script>
+    var fruit = 'apple';
+
+    switch(fruit) {
+        case "banana":
+            alert('I hate bananas');
+            break;
+        case "apple":
+            alert('I love apples');
+            break;
+        case "orange":
+            alert('Oranges are ok');
+            break;
+        default:
+            alert('I love all other fruits');
+            break;
+    }
 </script>
 ```
