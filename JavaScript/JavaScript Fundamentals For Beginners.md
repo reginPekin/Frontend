@@ -9,3 +9,26 @@
 * Valiade Forms
 * Create Animations, Slideshows, Scrollers, etc
 * Build Apps with FavaScript Frameworks
+
+How to link JS script file:
+
+```html
+<script scr = "JSfile.js"></script>
+```
+
+or 
+
+```html
+<script>
+    //letters, numbers, underscore, dollar signs
+
+    // camel case
+    var myFavoriteNumber;
+
+    // partial case
+    var MyFavoriteNumber;
+
+    // underscore
+    var my_favoirite_number; 
+</script>
+```
