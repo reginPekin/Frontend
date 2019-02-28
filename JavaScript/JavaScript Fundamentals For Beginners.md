@@ -67,3 +67,38 @@ or
 
 </script>
 ```
+
+## Loops
+__FOR__:
+
+```html
+<script>
+    for(var 1 = 0; i <= 10; i++){
+        console.log(i);
+    }  // result: 0 1 2 3 4 5 6 7 8 9 10
+</script>
+```
+
+__WHILE__:
+
+```html
+<script>
+    var i = 1;
+    while(i < 10) {
+        console.log(i);
+        i++;
+    }
+</script>
+```
+
+__FOR_AECH__:
+
+```html
+<script>
+    var numbers = [33, 54, 76, 34, 2, 6];
+
+    numbers.forEach(function(number){
+        console.log(number);
+    });
+</script>
+```
