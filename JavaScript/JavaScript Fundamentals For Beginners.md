@@ -2,7 +2,7 @@
 
 ## What can I do with JavaScript?
 
-* Put content in an HtML page on the fly
+* Put content in an HTML page on the fly 
 * Make Wabpage Responsive
 * Detect a Users Browser & Other Info
 * Create Cookies
@@ -117,7 +117,7 @@ __FOR_EACH__:
 
     var var1 = 3;
     var var2 = 4;
-    if(var1 == var2) || (var1 == 3){ // sign '===' means equal of 
+    if(var1 == var2) || (var1 == 3){ 
         console.log('This is true');
     } else {
         console.log('This is false');
