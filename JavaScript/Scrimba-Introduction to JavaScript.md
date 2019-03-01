@@ -135,3 +135,26 @@ let example = 7.77;
 console.log(example.toFixed(1));
 // 7.8
 ```
+
+## Boolean
+
+```js
+let example1 = false;
+
+console.log(Boolean(example1))
+// false
+```
+
+```js
+let example1 = true;
+
+console.log(Boolean(example1))
+// true
+```
+
+```js
+let example1 = 666;
+
+console.log(Boolean(example1))
+// true
+```
