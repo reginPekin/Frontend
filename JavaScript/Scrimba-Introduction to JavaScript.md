@@ -99,3 +99,39 @@ let lastName = 'Israel';
 console.log(`${firstName} ${lastName}`.split(''));
 // ["D", "y", "l", "a", "n", " ", "I", "s", "r", "a", "e", "l"]
 ```
+
+## Numbers
+
+```js
+let example = "7.77";
+
+console.log(typeof(example))
+console.log(typeof(parseInt(example)));
+console.log(parseInt(example));
+// string
+// number
+// 7
+```
+
+```js
+let example = '7.77';
+
+console.log(typeof(parseFloat(example)));
+console.log(parseFloat(example));
+// number
+// 7.77
+```
+
+```js
+let example = 7.77;
+
+console.log(example.toFixed(5));
+// 7.77000
+```
+
+```js
+let example = 7.77;
+
+console.log(example.toFixed(1));
+// 7.8
+```
