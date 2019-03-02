@@ -274,3 +274,79 @@ console.log(example2);
 ["Dylan", 5, true, 11]
 */
 ```
+
+## Objects
+
+```js
+let example1 = {
+    firstName: 'Dylan'
+};
+
+let example2 = example1;
+
+example2.lastName = 'Israel';
+
+console.log(example1);
+console.log(example2);
+
+/*
+{firstName: "Dylan", lastName: "Israel"}
+{firstName: "Dylan", lastName: "Israel"}
+*/
+```
+
+But: 
+
+```js
+let example1 = {
+    firstName: 'Dylan'
+};
+
+let example2 = Object.assign({}, example1);
+
+example2.lastName = 'Israel';
+
+console.log(example1);
+console.log(example2);
+/*
+{firstName: "Dylan"}
+{firstName: "Dylan", lastName: "Israel"}
+*/
+```
+
+## Relational Operators
+
+```js 
+
+let example1 = 10;
+let example2 = '10';
+
+console.log(typeof example1);
+console.log(typeof example2);
+console.log(example1 == example2);
+console.log(example1 === example2);
+/*
+number
+string
+true
+false
+*/
+```
+
+```js
+let example1 = 5 === 5;
+let example2 = 5 == '5';
+let example3 = 6 != '6';
+let example4 = 7 !== '7';
+
+console.log(example1);
+console.log(example2);
+console.log(example3);
+console.log(example4); 
+/*
+true
+true
+false
+true
+*/
+```
