@@ -350,3 +350,180 @@ false
 true
 */
 ```
+
+## Increment & Decrement
+
+```js
+let example1 = 13;
+
+example1 -= 5;
+console.log(example1);
+
+example1 += 10;
+console.log(example1);
+
+example1 *= 3;
+console.log(example1);
+
+example1 /= 2;
+console.log(example1);
+
+example1 %= 10;
+console.log(example1);
+/*
+8
+18
+54
+27
+7
+*/
+```
+
+One more interesting moment: 
+
+```js
+let example1 = 5;
+example1++;
+
+console.log(example1);
+
+let example2 = 5;
+++example2;
+
+console.log(example2);
+/*
+6
+6
+*/
+```
+
+But:
+
+```js
+let example1 = 5;
+
+console.log(example1++); // add this value after this line of code
+
+let example2 = 5;
+
+console.log(++example2); // add this value within the line of code
+
+/*
+5
+6
+*/
+```
+## Switch
+
+```js
+let studentAnswer = 'D';
+
+switch(studentAnswer) {
+    case 'A': 
+        console.log('A is wrong.');
+        break;
+    case 'B' :
+        console.log('B is wrong.');
+        break;
+    case 'C':
+        console.log('C is correct.');
+        break;
+    default: 
+        console.log('Not a real answer.');
+}
+// Not a reak answer.
+```
+
+## For loop
+
+```js
+let total = 0;
+
+let numArray = [10, 20, 30, 40, 50, 60, 70, 80];
+
+for (let i = 0; i < numArray.length; i++) {
+    
+    total += numArray[i];
+}
+
+console.log(total);
+// 360
+```
+
+## Whilie & Do While
+
+```js
+let count = 0;
+
+while (count < 20) {
+    
+    count++;
+}
+
+console.log(count);
+// 20
+```
+
+```js
+let count = 0;
+
+while (true) {
+    count++;
+    
+    if(count >= 20) {
+        break;
+    }
+}
+
+console.log(count);
+// 20
+```
+
+```js
+let count = 0;
+
+while (false) {
+    count++;
+    
+    if(count >= 20) {
+        break;
+    }
+}
+
+console.log(count);
+// 0
+```
+What if while will be after condition: 
+
+```js
+let count = 0;
+
+do {
+    count++;
+    
+    if(count >= 20) {
+        break;
+    }
+}
+while (false)
+
+console.log(count);
+// 1
+```
+
+## Functions
+
+```js
+function add(num1, num2) {
+    return num1 + num2;
+}
+
+console.log(add(10, 6));
+console.log(add(15, 7));
+console.log(add(20,2));
+/*
+15
+22
+22
+*/
+```
