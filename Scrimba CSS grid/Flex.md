@@ -57,3 +57,25 @@ FB is set with `display` property in container. All children automatically becom
 We can split properties in the two sections: *container & items properties*
 
 <a name='3'></a>
+## FB container props
+
+<a name='4'></a>
+
+### flex-direction
+
+Sets the direction of main axis: elements can be laid in rows or in columns:
+
+```css
+.flex-container {
+  /* In row from left to right */
+  -webkit-flex-direction: row; /_ Safari _/
+  flex-direction:         row;
+
+  /* In row from right to left */
+  flex-direction:         row-reverse;
+
+  /* Top to bottom and reversed */
+  flex-direction:         column;
+  flex-direction:         column-reverse;
+}
+```
