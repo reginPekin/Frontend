@@ -123,3 +123,31 @@ Shorthand for `flex-direction` and `flex-wrap`.
 **Default**: `row nowrap`
 
 <a name='7'></a>
+
+### justify-content
+
+Aligns items alongs the main axis, distributes space.
+
+```css
+.flex-container {
+  /* Aligned to the left side of the container */
+  -webkit-justify-content: flex-start; /_ Safari _/
+  justify-content:         flex-start;
+
+  /* Aligned to the right */
+  justify-content:         flex-end;
+
+  /* In the center of the container */
+  justify-content:         center;
+
+  /* First and last items are at edges, others fill the space with equal gap between them */
+  justify-content:         space-between;
+
+  /* Same, but also gap before first item and after last */
+  justify-content:         space-around;
+}
+```
+
+**Default**: `flex-start`
+
+<a name='8'></a>
