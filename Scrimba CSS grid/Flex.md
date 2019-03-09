@@ -177,3 +177,38 @@ Same as `justify-content`, but in perpendicular direction.
 **Default**: `stretch`
 
 <a name='9'></a>
+
+### align-content
+
+On multiple lines sets the gaps between lines:
+
+```css
+.flex-container {
+  /* Items are displayed with distributed space after every row of flex items */
+  -webkit-align-content: stretch; /_ Safari _/
+  align-content:         stretch;
+
+  /* Items are stacked toward the cross start  or end */
+  align-content:         flex-start;
+  align-content:         flex-end;
+
+  /* Same to justify */
+  align-content:         space-between;
+  align-content:         space-around;
+}
+```
+
+**Default**: `stretch`
+
+<a name='10'></a>
+
+### Note for flex containers
+
+* all of the `column-*` properties have no effect on a flex container.
+* the `::first-line` and `::first-letter` pseudo-elements do not apply to flex containers.
+
+<a name="11"></a>
+
+## FB items props
+
+<a name="12"></a>
