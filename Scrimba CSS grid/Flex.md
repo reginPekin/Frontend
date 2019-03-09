@@ -42,3 +42,18 @@ It's first draft were made in 2009 and is under development.
 For 2019 it's pretty sweet. IE11 has bugs, otherwise it's perfect.
 
 <a name="2"></a>
+
+## Usage
+
+FB is set with `display` property in container. All children automatically become flex items:
+
+```css
+.flex-container {
+  display: -webkit-flex; /_ Safari _/
+  display: flex;
+}
+```
+
+We can split properties in the two sections: *container & items properties*
+
+<a name='3'></a>
