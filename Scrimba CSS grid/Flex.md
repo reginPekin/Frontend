@@ -151,3 +151,29 @@ Aligns items alongs the main axis, distributes space.
 **Default**: `flex-start`
 
 <a name='8'></a>
+
+### align-items
+
+Same as `justify-content`, but in perpendicular direction.
+
+```css
+.flex-container {
+  /* Items fill the whole axis length from cross start to cross end */
+  -webkit-align-items: stretch; /_ Safari _/
+  align-items:         stretch;
+
+  /* Items are stacked to the cross start or end */
+  align-items:         flex-start;
+  align-items:         flex-end;
+
+  /* Items are stacked in the center */
+  align-items:          center;
+
+  /* By items' baselines */
+  align-items:          baseline;
+}
+```
+
+**Default**: `stretch`
+
+<a name='9'></a>
