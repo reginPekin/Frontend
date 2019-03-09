@@ -79,3 +79,26 @@ Sets the direction of main axis: elements can be laid in rows or in columns:
   flex-direction:         column-reverse;
 }
 ```
+
+**Default**: `row`
+
+`row` & `row-reverse` depend on writing mode.
+
+<a name='5'></a>
+
+### flex-wrap
+
+Sets the amount of lines. Should it be a single or multiple lines, and direction.
+
+```css
+.flex-container {
+  /* In one row */
+  -webkit-flex-wrap: nowrap; /_ Safari _/
+  flex-wrap:         nowrap;
+
+  /* In multiple rows */
+  flex-wrap:         wrap;
+  flex-wrap:         wrap-reverse;
+}
+```
+
