@@ -212,3 +212,33 @@ On multiple lines sets the gaps between lines:
 ## FB items props
 
 <a name="12"></a>
+
+### order
+
+Order in which children are displayed.
+
+```css
+.flex-item {
+  -webkit-order: ; /_ Safari _/
+  order:         ;
+}
+```
+
+**Default**: 0
+
+<a name="13"></a>
+
+### flex-grow
+
+Decides, wether this item can grow
+
+```css
+.flex-item {
+  -webkit-flex-grow: ; /_ Safari _/
+  flex-grow:         ;
+}
+```
+
+**Default**: 0
+
+<a name="14"></a>
