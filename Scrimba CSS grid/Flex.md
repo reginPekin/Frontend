@@ -101,4 +101,25 @@ Sets the amount of lines. Should it be a single or multiple lines, and direction
   flex-wrap:         wrap-reverse;
 }
 ```
+**Default**: `nowrap`
 
+Same with writing mode.
+
+<a name='6'></a>
+
+### flex-flow
+
+Shorthand for `flex-direction` and `flex-wrap`.
+
+```css
+.flex-container {
+  -webkit-flex-flow:  flex-direction flex-wrap ; /_ Safari _/
+
+  /* For example */
+  flex-flow:          row wrap;
+}
+```
+
+**Default**: `row nowrap`
+
+<a name='7'></a>
