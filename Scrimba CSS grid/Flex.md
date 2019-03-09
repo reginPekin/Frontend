@@ -242,3 +242,67 @@ Decides, wether this item can grow
 **Default**: 0
 
 <a name="14"></a>
+
+### flex-shrink
+
+Decides, wether this item can shrink
+
+```css
+.flex-item {
+  -webkit-flex-shrink: ; /_ Safari _/
+  flex-shrink:         ;
+}
+```
+
+**Default**: 1
+
+<a name="15"></a>
+
+### flex-basis
+
+Initial main size of the item, same as width while `flex-direction: row`, same as height, while `column`:
+
+```css
+.flex-item {
+  -webkit-flex-basis: auto ; /_ Safari _/
+  flex-basis:         auto ;
+}
+```
+
+**Default**: `auto`
+
+<a name="16"></a>
+
+### flex
+
+Shorthand for `flex-grow`,`flex-shrink` and `flex-basis`:
+
+```css
+.flex-item {
+  -webkit-flex:1 1 200px; /_ Safari _/
+  flex:        1 1 200px;
+}
+```
+
+**Default**: `0 1 auto`
+
+<a name='17'></a>
+
+### align-self
+
+Overrides `align-items` for this item.
+
+```css
+.flex-item {
+  -webkit-align-self: auto | flex-start | flex-end | center | baseline | stretch; /_ Safari _/
+  align-self:         auto | flex-start | flex-end | center | baseline | stretch;
+}
+```
+
+**Default**: `auto`
+
+<a name='18'></a>
+
+### Note for flex items
+
+* `float`, `clear` and `vertical-align` have no effect on a flex item, and do not take it out-of-flow.
