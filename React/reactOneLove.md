@@ -4,7 +4,7 @@
 
 Consider this variable declaration:
 
-```JSX
+```JS
 const element = <h1>Hello, world ^.^</h1>
 ```
 
