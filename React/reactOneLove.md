@@ -1,4 +1,6 @@
-# Introducing JSX
+# React
+
+## Introducing JSX
 
 Consider this variable declaration:
 
