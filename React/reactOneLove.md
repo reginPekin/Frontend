@@ -383,7 +383,7 @@ React is pretty flexible but it has a single strict rule:
 
 <a name="CR"></a>
 
-<a name="l%k"></a>
+<a name="l&k"></a>
 
 <a name="forms"></a>
 
