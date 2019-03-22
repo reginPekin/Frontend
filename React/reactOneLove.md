@@ -116,3 +116,56 @@ const element = {
 ```
 
 These objects are called “React elements”. You can think of them as descriptions of what you want to see on the screen. React reads these objects and uses them to construct the DOM and keep it up to date.
+
+## Rendering Elements
+
+An element describes what you want to see on the screen: 
+
+```JS
+const element = <h1>Hello, world!</h1>;
+```
+
+### Rendering na Element into te DOM
+
+Let’s say there is a <div> somewhere in your HTML file:
+
+```JS
+<div id="root"></div>
+```
+We call this a “root” DOM node because everything inside it will be managed by React DOM.
+
+To render a React element into a root DOM node, pass both to ReactDOM.render():
+
+```Js
+const element = <h1>Hello, world!</h1>
+ReactDOM.render(element,
+document.getElementById('root'));
+
+### Updating the Render Element 
+
+React elements are immutable. Once you create an element, you can’t change its children or attributes. An element is like a single frame in a movie: it represents the UI at a certain point in time.
+
+With our knowledge so far, the only way to update the UI is to create a new element, and pass it to ReactDOM.render().
+
+Consider this tickind clock example: 
+
+```JS
+function tick() {
+  const element = (
+    <div>
+      <h1>Hello, world!</h1>
+      <h2>Now is is {new Date().toLocalTimeString()}.</h2>
+    </div>
+  );
+  ReactDOM.render(element, 
+  document.getElementById('root'));
+}
+
+setInterval(tick, 1000);
+```
+### React only Updates What's Necessary
+
+React DOM compares the element and its children to the previous one, and only applies the DOM updates necessary to bring the DOM to the desired state.
+
+Even though we create an element describing the whole UI tree on every tick, only the text node whose contents has changed gets updated by React DOM.
+
