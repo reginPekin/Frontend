@@ -1,5 +1,21 @@
 # React
 
+## Table of Contents
+
+1. [Introducing JSX](#introJSX)
+2. [Rendering Elements](#render)
+3. [Components and Props](#props)
+4. [State and Lifecycle](#state)
+5. [Handling Events](#HE)
+6. [Conditional Rendering](#CR)
+7. [Lists and Keys](#l&k)
+8. [Forms](#forms)
+9. [Lifting State Up](#LSU)
+10. [Composition vs Inheritance](#CvsI)
+11. [Thinking In React](#TiR)
+
+
+<a name="introJSX"></a>
 ## Introducing JSX
 
 Consider this variable declaration:
@@ -117,6 +133,7 @@ const element = {
 
 These objects are called “React elements”. You can think of them as descriptions of what you want to see on the screen. React reads these objects and uses them to construct the DOM and keep it up to date.
 
+<a name="render"></a>
 ## Rendering Elements
 
 An element describes what you want to see on the screen: 
@@ -169,6 +186,7 @@ React DOM compares the element and its children to the previous one, and only ap
 
 Even though we create an element describing the whole UI tree on every tick, only the text node whose contents has changed gets updated by React DOM.
 
+<a name="props"></a>
 ## Conponents and Props
 
 ### Function and Class Components
@@ -358,3 +376,19 @@ function withdraw(account, amount) {
 React is pretty flexible but it has a single strict rule:
 
 **All React components must act like pure functions with respect to their props.**
+
+<a name="state"></a>
+
+<a name="HE"></a>
+
+<a name="CR"></a>
+
+<a name="l%k"></a>
+
+<a name="forms"></a>
+
+<a name="LSU"></a>
+
+<a name="CvsI"></a>
+
+<a name="TiR"></a>
