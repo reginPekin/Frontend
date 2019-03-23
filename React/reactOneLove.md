@@ -443,15 +443,15 @@ We mentioned before that components defined as classes have some additional feat
 
 You can convert a function component like Clock to a class in five steps:
 
-Create an ES6 class, with the same name, that extends React.Component.
+* Create an ES6 class, with the same name, that extends React.Component.
 
-Add a single empty method to it called __render()__.
+* Add a single empty method to it called __render()__.
 
-Move the body of the function into the *render()* method.
+* Move the body of the function into the *render()* method.
 
-Replace *props* with this.props in the *render()* body.
+* Replace *props* with this.props in the *render()* body.
 
-Delete the remaining empty function declaration.
+* Delete the remaining empty function declaration.
 
 ```JS
 class Clock extends React.Component {
