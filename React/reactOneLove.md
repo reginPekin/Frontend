@@ -439,6 +439,37 @@ State is similar to props, but it is private and fully controlled by the compone
 
 We mentioned before that components defined as classes have some additional features. Local state is exactly that: a feature available only to classes.
 
+### Converting a Function to a Class
+
+You can convert a function component like Clock to a class in five steps:
+
+Create an ES6 class, with the same name, that extends React.Component.
+
+Add a single empty method to it called __render()__.
+
+Move the body of the function into the *render()* method.
+
+Replace *props* with this.props in the *render()* body.
+
+Delete the remaining empty function declaration.
+
+```JS
+class Clock extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>Hello, world!</h1>
+        <h2>It is {this.props.date.toLocaleTimeString()}.</h2>
+      </div>
+    );
+  }
+}
+```
+
+*Clock* is now defined as a class rather than a function.
+
+The *render* method will be called each time an update happens, but as long as we render <Clock /> into the same DOM node, only a single instance of the *Clock* class will be used. This lets us use additional features such as local state and lifecycle methods.
+
 
 
 <a name="HE"></a>
