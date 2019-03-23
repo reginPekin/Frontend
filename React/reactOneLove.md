@@ -470,6 +470,97 @@ class Clock extends React.Component {
 
 The *render* method will be called each time an update happens, but as long as we render <Clock /> into the same DOM node, only a single instance of the *Clock* class will be used. This lets us use additional features such as local state and lifecycle methods.
 
+### Adding Local State to a Class
+
+We will move the date from props to state in three steps:
+
+1. Replace *this.props.date* with *this.state.date* in the *render()* method:
+
+```JS
+class Clock extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>Hello, world!</h1>
+        <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+      </div>
+    );
+  }
+}
+```
+
+2. Add a class constructor that assigns the initial *this.state*:
+
+```JS
+class Clock extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {date: new Date()};
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>Hello, world!</h1>
+        <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+      </div>
+    );
+  }
+}
+```
+
+Note how we pass *props* to the base 
+
+
+constructor:
+
+```JS
+  constructor(props) {
+    super(props);
+    this.state = {date: new Date()};
+  }
+```
+
+Class components should always call the base constructor with *props*.
+
+3. Remove the *date* prop from the <Clock /> element:
+
+```JS
+ReactDOM.render(
+  <Clock />,
+  document.getElementById('root')
+);
+```
+
+We will later add the timer code back to the component itself.
+
+The result looks like this:
+
+```JS
+class Clock extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {date: new Date()};
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>Hello, world!</h1>
+        <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(
+  <Clock />,
+  document.getElementById('root')
+);
+```
+
+Next, we’ll make the *Clock* set up its own timer and update itself every second.
+
 
 
 <a name="HE"></a>
