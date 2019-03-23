@@ -378,6 +378,68 @@ React is pretty flexible but it has a single strict rule:
 **All React components must act like pure functions with respect to their props.**
 
 <a name="state"></a>
+## State and Lifecycle
+
+Consider the ticking clock example from one of the previous sections. In Rendering Elements, we have only learned one way to update the UI. We call __ReactDOM.render()__ to change the rendered output:
+
+```JS
+function tick() {
+  const element = (
+    <div>
+      <h1>Hello, world!</h1>
+      <h2>It is {new Date().toLocaleTimeString()}.</h2>
+    </div>
+  );
+  ReactDOM.render(
+    element,
+    document.getElementById('root')
+  );
+}
+
+setInterval(tick, 1000);
+```
+
+In this section, we will learn how to make the Clock component truly reusable and encapsulated. It will set up its own timer and update itself every second.
+
+We can start by encapsulating how the clock looks:
+
+```JS
+function Clock(props) {
+  return (
+    <div>
+      <h1>Hello, world!</h1>
+      <h2>It is {props.date.toLocaleTimeString()}.</h2>
+    </div>
+  );
+}
+
+function tick() {
+  ReactDOM.render(
+    <Clock date={new Date()} />,
+    document.getElementById('root')
+  );
+}
+
+setInterval(tick, 1000);
+```
+However, it misses a crucial requirement: the fact that the __Clock__ sets up a timer and updates the UI every second should be an implementation detail of the __Clock__.
+
+Ideally we want to write this once and have the __Clock__ update itself:
+
+```JS
+ReactDOM.render(
+  <Clock />,
+  document.getElementById('root')
+);
+```
+
+To implement this, we need to add “state” to the __Clock__ component.
+
+State is similar to props, but it is private and fully controlled by the component.
+
+We mentioned before that components defined as classes have some additional features. Local state is exactly that: a feature available only to classes.
+
+
 
 <a name="HE"></a>
 
