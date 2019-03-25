@@ -678,11 +678,17 @@ Let’s quickly recap what’s going on and the order in which the methods are c
 
 5. If the *Clock* component is ever removed from the DOM, React calls the *componentWillUnmount()* lifecycle method so the timer is stopped.
 
-
-
-
-
 <a name="HE"></a>
+
+## Handling Events
+
+Handling events with React elements is very similar to handling events on DOM elements. There are some syntactic differences:
+
+* React events are named using camelCase, rather than lowercase.
+
+* With JSX you pass a function as the event handler, rather than a string.
+
+
 
 <a name="CR"></a>
 
