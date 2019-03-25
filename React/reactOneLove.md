@@ -688,6 +688,48 @@ Handling events with React elements is very similar to handling events on DOM el
 
 * With JSX you pass a function as the event handler, rather than a string.
 
+For example, the HTML:
+
+```JS
+<button onclick="activateLasers()">
+  Activate Lasers
+</button>
+```
+
+is slightly different in React:
+
+```JS
+<button onClick={activateLasers}>
+  Activate Lasers
+</button>
+```
+
+Another difference is that you cannot return *false* to prevent default behavior in React. You must call *preventDefault* explicitly. For example, with plain HTML, to prevent the default link behavior of opening a new page, you can write:
+
+```JS
+<a href="#" onclick="console.log('The link was clicked.'); return false">
+  Click me
+</a>
+```
+In React, this could instead be:
+
+```JS
+function ActionLink() {
+  function handleClick(e) {
+    e.preventDefault();
+    console.log('The link was clicked.');
+  }
+
+  return (
+    <a href="#" onClick={handleClick}>
+      Click me
+    </a>
+  );
+}
+```
+
+Here, *e* is a synthetic event. React defines these synthetic events according to the W3C spec, so you don’t need to worry about cross-browser compatibility. See the SyntheticEvent reference guide to learn more.
+
 
 
 <a name="CR"></a>
