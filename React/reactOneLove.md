@@ -966,6 +966,40 @@ It works because in JavaScript, *true && expression* always evaluates to *expres
 
 Therefore, if the condition is *true*, the element right after *&&* will appear in the output. If it is *false*, React will ignore and skip it.
 
+### Inline If-Else with Conditional Operator
+Another method for conditionally rendering elements inline is to use the JavaScript conditional operator condition ? true : false.
+
+In the example below, we use it to conditionally render a small block of text.
+
+```JS
+render() {
+  const isLoggedIn = this.state.isLoggedIn;
+  return (
+    <div>
+      The user is <b>{isLoggedIn ? 'currently' : 'not'}</b> logged in.
+    </div>
+  );
+}
+```
+
+It can also be used for larger expressions although it is less obvious what’s going on:
+
+```JS
+render() {
+  const isLoggedIn = this.state.isLoggedIn;
+  return (
+    <div>
+      {isLoggedIn ? (
+        <LogoutButton onClick={this.handleLogoutClick} />
+      ) : (
+        <LoginButton onClick={this.handleLoginClick} />
+      )}
+    </div>
+  );
+}
+```
+Just like in JavaScript, it is up to you to choose an appropriate style based on what you and your team consider more readable. Also remember that whenever conditions become too complex, it might be a good time to extract a component.
+
 <a name="l&k"></a>
 
 <a name="forms"></a>
