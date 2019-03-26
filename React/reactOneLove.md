@@ -825,9 +825,45 @@ The above two lines are equivalent, and use arrow functions and Function.prototy
 
 In both cases, the *e* argument representing the React event will be passed as a second argument after the ID. With an arrow function, we have to pass it explicitly, but with *bind* any further arguments are automatically forwarded.
 
-
-
 <a name="CR"></a>
+
+## Conditional Rendering
+
+In React, you can create distinct components that encapsulate behavior you need. Then, you can render only some of them, depending on the state of your application.
+
+Conditional rendering in React works the same way conditions work in JavaScript. Use JavaScript operators like if or the conditional operator to create elements representing the current state, and let React update the UI to match them.
+
+Consider these two components:
+
+```JS
+function UserGreeting(props) {
+  return <h1>Welcome back!</h1>;
+}
+
+function GuestGreeting(props) {
+  return <h1>Please sign up.</h1>;
+}
+```
+
+We’ll create a *Greeting* component that displays either of these components depending on whether a user is logged in:
+
+```JS
+function Greeting(pro ps) {
+  const isLoggedIn = props.isLoggedIn;
+  if (isLoggedIn) {
+    return <UserGreeting />;
+  }
+  return <GuestGreeting />;
+}
+
+ReactDOM.render(
+  // Try changing to isLoggedIn={true}:
+  <Greeting isLoggedIn={false} />,
+  document.getElementById('root')
+);
+```
+
+This example renders a different greeting depending on the value of *isLoggedIn* prop.
 
 <a name="l&k"></a>
 
