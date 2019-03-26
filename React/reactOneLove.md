@@ -937,7 +937,34 @@ ReactDOM.render(
 
 While declaring a variable and using an if statement is a fine way to conditionally render a component, sometimes you might want to use a shorter syntax. There are a few ways to inline conditions in JSX, explained below.
 
+### Inline If with Logical && Operator
+You may embed any expressions in JSX by wrapping them in curly braces. This includes the JavaScript logical *&&* operator. It can be handy for conditionally including an element:
 
+```JS
+function Mailbox(props) {
+  const unreadMessages = props.unreadMessages;
+  return (
+    <div>
+      <h1>Hello!</h1>
+      {unreadMessages.length > 0 &&
+        <h2>
+          You have {unreadMessages.length} unread messages.
+        </h2>
+      }
+    </div>
+  );
+}
+
+const messages = ['React', 'Re: React', 'Re:Re: React'];
+ReactDOM.render(
+  <Mailbox unreadMessages={messages} />,
+  document.getElementById('root')
+);
+```
+
+It works because in JavaScript, *true && expression* always evaluates to *expression*, and *false && expression* always evaluates to *false*.
+
+Therefore, if the condition is *true*, the element right after *&&* will appear in the output. If it is *false*, React will ignore and skip it.
 
 <a name="l&k"></a>
 
