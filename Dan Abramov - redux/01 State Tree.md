@@ -2,7 +2,7 @@
 
 <h2>State tree</h2>
 
-*First rule of Redux: to represent the whole state of application as a single JS object*
+**First rule of Redux: to represent the whole state of application as a single JS object**
 
 All mutations are explicit
 
@@ -13,7 +13,7 @@ If we have a todo app, we want to store all aspects in one object, so if a task 
 <h2>Describing state changes with actions</h2>
 
 It is a js object, the minimum representation of state:
-```
+```js
 [object Object] { /// THIS IS STATE TREE
   type: 'INCREMENT' // THIS IS ONE ACTION
 }
@@ -23,7 +23,7 @@ for counter we need only ```increment``` and ```decrement``` for adding or subst
 
 For several we have to add an ```id``` to every counter.
 
-*The second principle of Redux: the state tree is read only, instead you need to despatch an action*
+**The second principle of Redux: the state tree is read only, instead you need to despatch an action**
 
 <h2>Pure and impure functions</h2>
 
