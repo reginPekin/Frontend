@@ -1,3 +1,6 @@
+| [Back To React Folder](https://github.com/reginPekin/Frontend/tree/master/Dan%20Abramov%20-%20redux) | [Next >](2%20Reducer.md) |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------- |
+
 <h1>Two principles and functions</h1>
 
 <h2>State tree</h2>

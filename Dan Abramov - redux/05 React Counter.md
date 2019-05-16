@@ -1,3 +1,6 @@
+| [< Previous](04%20Store%20From%20Scratch.md) | [Back To React Folder](https://github.com/reginPekin/Frontend/tree/master/Dan%20Abramov%20-%20redux) | [Next >](06%20Avoiding%20Mutations.md) |
+| ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
+
 <h1>React Counter Example</h1>
 
 Earlier we did: 

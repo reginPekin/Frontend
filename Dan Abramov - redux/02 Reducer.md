@@ -1,3 +1,6 @@
+| [< Previous](01%20State%20Tree.md) | [Back To React Folder](https://github.com/reginPekin/Frontend/tree/master/Dan%20Abramov%20-%20redux) | [Next >](03%20Store%20Methods.md) |
+| ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
+
 <h1>Reducer</h1>
 
 State mutations should be described as a pure functions.

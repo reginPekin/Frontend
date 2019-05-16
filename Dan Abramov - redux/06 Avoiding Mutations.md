@@ -1,4 +1,4 @@
-| [< Previous abstract](05%20React%20Counter.md) | [Back To React Folder](https://github.com/reginPekin/Frontend/tree/master/Dan%20Abramov%20-%20redux) |
+| [< Previous](05%20React%20Counter.md) | [Back To React Folder](https://github.com/reginPekin/Frontend/tree/master/Dan%20Abramov%20-%20redux) |
 | -------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
 
 

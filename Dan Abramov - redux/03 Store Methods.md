@@ -1,3 +1,6 @@
+| [< Previous](Dan%20Abramov%20-%20redux/02%20Reducer.md) | [Back To React Folder](https://github.com/reginPekin/Frontend/tree/master/Dan%20Abramov%20-%20redux) | [Next >](04%20Store%20From%20Scratch.md) |
+| ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
+
 <h1>Redux store methods</h1>
 
 ```js

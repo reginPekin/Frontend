@@ -1,3 +1,6 @@
+| [< Previous](03%20Store%20Methods.md) | [Back To React Folder](https://github.com/reginPekin/Frontend/tree/master/Dan%20Abramov%20-%20redux) | [Next >](05%20React%20Counter.md) |
+| ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
+
 <h1>Implementing Store From Scratch</h1>
 
 Instead of ```import { createStore } from 'redux'``` we will write our own.
