@@ -1,5 +1,5 @@
-| [< Previous abstract](04%20Store%20From%20Scratch.md) | [Back To React Folder](https://github.com/reginPekin/Frontend/tree/master/Dan%20Abramov%20-%20redux) 
-| ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
+| [< Previous abstract](05%20React%20Counter.md) | [Back To React Folder](https://github.com/reginPekin/Frontend/tree/master/Dan%20Abramov%20-%20redux) |
+| -------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
 
 
 <h1>Avoiding Mutations</h1>
