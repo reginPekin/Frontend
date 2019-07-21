@@ -82,3 +82,34 @@ const person1 = new Person("Regina", 21);
 
 person1.greeting();
 ```
+
+### Path
+
+The path module provides utilities for working with file and directory paths. It can be accessed using:
+
+```js
+const path = require("path");
+
+console.log(__filename);
+// Users/vinishko/Documents/Githab/Frontend/Node.js/reference/path_demo.js
+
+//Base file name
+console.log(path.basename(__filename));
+// path_demo.js
+
+// Directory name
+console.log(path.dirname(__filename));
+// Users/vinishko/Documents/Githab/Frontend/Node.js/reference
+
+// File extension
+console.log(path.extname(__filename));
+// .js
+
+// Create path object
+console.log(path.parse(__filename).base);
+
+// Concatenate paths
+// ../test/hello.html
+console.log(path.join(__dirname, "test", "hello.html"));
+// /Users/vinishko/Documents/Githab/Frontend/Node.js/reference/test/hello.html
+```
