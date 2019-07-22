@@ -166,3 +166,36 @@ fs.rename(
 );
 // Hello.txt -> bzzzz.txt
 ```
+
+### os - Operation System
+
+```js
+const os = require("os");
+
+// Platform
+console.log(os.platform());
+// darwin
+
+// CPU Arch
+console.log(os.arch());
+// x64
+
+// CPU Core Info
+console.log(os.cpus());
+
+// Free memory
+console.log(os.freemem());
+// 1920442368
+
+// Total memory
+console.log(os.totalmem());
+// 8589934592
+
+// Home dir
+console.log(os.homedir());
+// /Users/vinishko
+
+// Uptime
+console.log(os.uptime());
+// 1096240
+```
