@@ -113,3 +113,56 @@ console.log(path.parse(__filename).base);
 console.log(path.join(__dirname, "test", "hello.html"));
 // /Users/vinishko/Documents/Githab/Frontend/Node.js/reference/test/hello.html
 ```
+
+### fs - File System
+
+```js
+// fs - File System
+
+const fs = require("fs");
+const path = require("path");
+
+// Make folder
+fs.mkdir(path.join(__dirname, "/test"), {}, err => {
+  if (err) throw err;
+  console.log("Folder created...");
+});
+
+// Create and write to file
+fs.writeFile(
+  path.join(__dirname, "/test", "hello.txt"),
+  "Hello, Vanya!",
+  err => {
+    if (err) throw err;
+    console.log("File written to...");
+  }
+);
+// Hello.txt: "Hello, Vanya!"
+// Terminal: File written to...
+
+// File aapend
+fs.appendFile(path.join(__dirname, "/test", "hello.txt"), " Bzzzz", err => {
+  if (err) throw err;
+  console.log("File written to...");
+});
+// Hello.txt:"Hello, Vanya! Bzzzz"
+// Terminal: File written to...
+
+// Read file
+fs.readFile(path.join(__dirname, "/test", "hello.txt"), "utf8", (err, data) => {
+  if (err) throw err;
+  console.log(data);
+});
+// Terminal: Hello, Vanya! Bzzzz
+
+// Rename file
+fs.rename(
+  path.join(__dirname, "/test", "hello.txt"),
+  path.join(__dirname, "/test", "bzzzz.txt"),
+  err => {
+    if (err) throw err;
+    console.log("File renamed...");
+  }
+);
+// Hello.txt -> bzzzz.txt
+```
