@@ -263,3 +263,48 @@ myEmmiter.on("event", () => console.log("Event Fired!"));
 // Init event
 myEmmiter.emit("event");
 ```
+
+### Logger.js
+
+```js
+const EventEmitter = require("events");
+const uuid = require("uuid");
+// uuid - universally unique identifier
+
+console.log(uuid.v4()); // e6111790-4bb7-48c9-876a-71501e0ac062
+
+console.log(uuid.v4()); // e4804f54-a34d-4730-9767-0c23779e02eb
+```
+
+### Event example
+
+logger.js >
+
+```js
+const EventEmitter = require("events");
+const uuid = require("uuid");
+// uuid - universally unique identifier
+
+class Logger extends EventEmitter {
+  log(msg) {
+    // Call event
+    this.emit("message", { id: uuid.v4(), msg });
+  }
+}
+
+module.exports = Logger;
+```
+
+code.js >
+
+```js
+const Logger = require("./logger");
+
+const logger = new Logger();
+
+logger.on("message", data => console.log("Called Listener:", data));
+logger.log("Hello world!");
+
+// Called Listener: { id: '38d65350-1490-46af-a6a4-6e873572cc5b',
+//  msg: 'Hello world!' }
+```
