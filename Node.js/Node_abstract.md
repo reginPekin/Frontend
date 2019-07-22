@@ -199,3 +199,49 @@ console.log(os.homedir());
 console.log(os.uptime());
 // 1096240
 ```
+
+### URL parametres
+
+```js
+const url = require("url");
+
+const myURL = new URL(
+  "http://reginbegin.com:8000/hello.html?id=100&status=active"
+);
+
+// Serialized URL
+console.log(myURL.href);
+console.log(myURL.toString());
+// http://reginbegin.com:8000/hello.html?id=100&status=active
+
+// Host (root domain)
+console.log(myURL.host);
+// reginbegin.com:8000
+
+// Hostname (does not get port)
+console.log(myURL.hostname);
+// reginbegin.com
+
+// Pathname
+console.log(myURL.pathname);
+// /hello.html
+
+// Serialized query
+console.log(myURL.search);
+// ?id=100&status=active
+
+// Params object
+console.log(myURL.searchParams);
+// URLSearchParams { 'id' => '100', 'status' => 'active' }
+
+// Add params
+myURL.searchParams.append("abc", "123");
+console.log(myURL.searchParams);
+// URLSearchParams { 'id' => '100', 'status' => 'active', 'abc' => '123' }
+
+// Loop through params
+myURL.searchParams.forEach((value, name) => console.log(`${name}: ${value}`));
+// id: 100
+// status: active
+// abc: 123
+```
