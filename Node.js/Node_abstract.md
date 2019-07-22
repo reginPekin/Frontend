@@ -245,3 +245,21 @@ myURL.searchParams.forEach((value, name) => console.log(`${name}: ${value}`));
 // status: active
 // abc: 123
 ```
+
+### Event
+
+```js
+const EventEmmiter = require("events");
+
+// Create class
+class MyEmmiter extends EventEmmiter {}
+
+// Init object
+const myEmmiter = new MyEmmiter();
+
+// Event listener
+myEmmiter.on("event", () => console.log("Event Fired!"));
+
+// Init event
+myEmmiter.emit("event");
+```
