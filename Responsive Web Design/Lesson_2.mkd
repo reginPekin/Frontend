@@ -1,0 +1,28 @@
+## Lesson 2: Starting Small
+
+### Viewport and pixels
+
+ **Viewport** defines the area of the screen that the browser can render content to
+
+**Hardware pixels** - an individual dot of light in the display
+
+ **Device-independent pixel (DIP)** - unit of length.
+A typical use is to allow mobile device software to scale the display of information and user interaction to different screen sizes
+
+```<meta name="viewport" content="width=device-width,initial-scale=1" > ```
+
+*viewport* - we tell browser that we know what we're doing
+
+*width=device-width* instructs the page to match the screen's width in device independent pixels. This allow the page to reflow content the screen sizes, whether rendered on a small mobile or on the laptop.
+
+*initial-scale=1* instructs the browsers to establish a one to one relationship between device independent pixels and CSS pixels
+
+#### Don't forget to set the viewport!
+
+### Tap Target Size
+
+Tap targets should be bigger than the average finger. So, to ensure that all of your elements are at least that size, add  `min-height: 48px;`  and  `min-width: 48px;`to every tappable element.
+
+`height`  and  `width`  alone can be a little dangerous because it won't allow the element to resize if the content inside of it is bigger than the container.
+
+#### From smaller to larger!
