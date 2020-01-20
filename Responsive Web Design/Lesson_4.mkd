@@ -1,0 +1,51 @@
+## Lesson 3: Common Responsive Pattern
+
+### Pattern - Column Drop
+
+Column drop is the easiest. At its narrowest viewport, each element simply stacks vertically, one on top of the other.
+The column drop layout stacks one column at a time as the viewport is reduced.
+
+**Example:**
+``` html
+<div class="container">
+	<div class="box dark_blue"></div>
+	<div class="box light_blue"></div>
+	<div class="box green"></div>
+</div>
+```
+
+```css
+.container{
+	display: flex;
+	flew-wrap: wrap;
+}
+.box{
+	width: 100%
+}
+
+```
+![width < 450px](https://i.ibb.co/tq8PBkZ/2020-01-20-18-52-49.png)
+```css
+@media screen and (min-width:450px){
+	.dark_blue{
+		width: 25%
+	}
+	.light_blue{
+		width:75%
+	}
+}
+```
+![width < 550px && width >= 450px](https://i.ibb.co/qgv2LZw/2020-01-20-18-53-11.png)
+```css
+@media screen and (min-width:550px){
+	.dark_blue, .green{
+		width: 25%
+	}
+	.light_blue{
+		width:50%
+	}
+}
+```
+![width >=550px](https://i.ibb.co/zZMDbrr/2020-01-20-18-53-35.png)
+
+### Pattern – Mostly Fluid
