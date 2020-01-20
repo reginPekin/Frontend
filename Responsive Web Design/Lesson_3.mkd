@@ -1,0 +1,31 @@
+## Lesson 3: Building up
+
+### @media
+
+|Linked CSS  | @media |
+|--|--|
+| many small files | files a little bit bigger |
+|many HTTP requests  | fewer request |
+
+ **linked style example:**
+```
+<link rel="stylesheet" media="screen and (min-width:500)" href="yes.css">
+```
+
+
+**@media example:**
+ ``` 
+ @media screen and (min-width:500){
+		body {color: #F79420};
+ } 
+ @media screen and (min-width:800px){
+		body {background-color: blue};
+ } 
+```
+When the viewport is less than 500 pixels, no styles are applied but above 500 pixels body color becomes orange, and above 800 pixels, not the only orange text, but also the blue background.
+
+### Breakpoint
+
+**Breakpoints** are the point a which your sites content will respond to provide the user with the best possible layout to consume the information.
+
+*We shouldn't choose break points at all. Instead, we should find them, using our content as a guide.*
