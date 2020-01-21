@@ -1,4 +1,4 @@
-## Lesson 3: Common Responsive Pattern
+## Lesson 3: Common Responsive Pattern## Lesson 3: Common Responsive Pattern
 
 ### Pattern - Column Drop
 
@@ -6,7 +6,7 @@ Column drop is the easiest. At its narrowest viewport, each element simply stack
 The column drop layout stacks one column at a time as the viewport is reduced.
 
 **Example:**
-``` html
+```html
 <div class="container">
 	<div class="box dark_blue"></div>
 	<div class="box light_blue"></div>
@@ -24,7 +24,8 @@ The column drop layout stacks one column at a time as the viewport is reduced.
 }
 
 ```
-![width < 450px](https://i.ibb.co/tq8PBkZ/2020-01-20-18-52-49.png)
+<img  src="https://i.ibb.co/tq8PBkZ/2020-01-20-18-52-49.png"  alt="width < 450px" height="350" />
+
 ```css
 @media screen and (min-width:450px){
 	.dark_blue{
@@ -35,7 +36,8 @@ The column drop layout stacks one column at a time as the viewport is reduced.
 	}
 }
 ```
-![width < 550px && width >= 450px](https://i.ibb.co/qgv2LZw/2020-01-20-18-53-11.png)
+<img  src="https://i.ibb.co/qgv2LZw/2020-01-20-18-53-11.png"  alt="width < 450px" height="350" />
+
 ```css
 @media screen and (min-width:550px){
 	.dark_blue, .green{
@@ -46,6 +48,163 @@ The column drop layout stacks one column at a time as the viewport is reduced.
 	}
 }
 ```
-![width >=550px](https://i.ibb.co/zZMDbrr/2020-01-20-18-53-35.png)
+<img  src="https://i.ibb.co/zZMDbrr/2020-01-20-18-53-35.png"  alt="width < 450px" height="350" />
 
 ### Pattern – Mostly Fluid
+
+A multi column patterns that introduces larger margins on bigger screens and stacked columns on mobile views.
+
+**Example**
+
+```html
+<div class="container">
+	<div class="box dark_blue"></div>
+	<div class="box light_blue"></div>
+	<div class="box green"></div>
+	<div class="box red"></div>
+	<div class="box orange"></div>
+</div>
+```
+
+```css
+.container{
+	display: flex;  
+	flex-wrap: wrap;  
+}  
+  
+box { 
+	width: 100%;  
+}  
+
+@media screen and (min-width:  450px)  {  			
+	.light_blue,  .green{
+		width: 50%;
+	}  
+}    
+
+@media  screen and (min-width:  550px)  {
+	.dark_blue, .light_blue {width: 50%};
+	.green, .red, .orange {width: 33.33333%} 
+}  
+
+@media screen and (min-width:  700px){
+	.container{
+		width:700px; 
+		margin-left:auto; 
+		margin-right:auto;  
+	}  
+}
+```
+
+![enter image description here](https://i.ibb.co/Cz79g3M/2020-01-21-16-45-53.png)
+
+### Pattern - Layout Shifter
+
+The most complicated of the layout patterns requiring changes to the layout at each breakpoint.
+
+This kind of layout should not be taken as generic, but instead as a way that you might manipulate your own design into different ways given the breakpoints you need to make your own custom design work across a variety of viewports.
+
+**Example:**
+
+```html
+<div class="container">
+	<div class="box dark_blue"></div>
+	<div class="container" id="container2">
+		<div class="box light_blue"></div>
+		<div class="box green"></div>
+	</div>
+	<div class="box red"></div>
+</div>
+```
+
+```css
+.container{
+	width:100%;
+	display: flex;  
+	flex-wrap: wrap;  
+}  
+  
+box { 
+	width: 100%;  
+}  
+
+@media screen and (min-width:  500px)  {  			
+	.dark_blue{
+		width: 50%;
+	}
+	#container2{
+		width: 50%;
+	}
+}    
+
+@media  screen and (min-width:  600px)  {
+	.dark_blue{
+		width: 25%;
+		order:1;
+	};
+	#container2{
+		width: 50%;
+	}
+	.red{
+		width: 25%;
+		order: -1;
+	} 
+}  
+```
+
+![enter image description here](https://i.ibb.co/XZPMgSc/2020-01-21-18-05-23.png)
+
+### Pattern - Off Canvas
+
+With **off canvas**, instead of stacking content vertically, the off canvas places less content, for example navigation or app menus, off screen, only showing them if the screen is large enough.
+
+Example:
+
+```html
+<nav id="drawer" class="dark_blue"></nav>
+<main class="light_blue"></main>
+```
+
+```css
+html,body, main {
+	height: 100%;
+	width: 100%;
+}
+  
+nav{ 
+	width: 300px;
+	height: 100%;
+	possition: absolute;
+	transform: translate(-300px, 0);
+	transition: transform 0.3s ease;
+}  
+
+}
+nav.open {
+  transform: translate(0, 0);
+}
+
+@media  screen and (min-width:  600px)  {
+	nav{
+		position: relative;
+		transform: translate(0,0)
+	}
+	body{
+		display: flex;
+		flex-flow: row nowrap;
+	}
+	main{
+		width: auto;
+		flex-grow: 1;
+	}
+}  
+```
+
+```js
+menu.addEventListener('click', function(e) {
+  drawer.classList.toggle('open');
+  e.stopPropagation();
+});
+```
+
+![enter image description here](https://i.ibb.co/MMV7t7B/2020-01-21-18-30-58.png)
