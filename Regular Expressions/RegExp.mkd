@@ -1,0 +1,123 @@
+## Alternation && Case insensetive
+
+```js
+const myString = "Mike has a Cat";
+const regExp = /dog|cat/i; // || – Acts like a boolean OR. Matches the expression before or after the |. It can operate within a group, or on a whole expression. The patterns will be tested in order.
+// i – ignore case
+const result1 = regExp.test(myString); // true
+const result2 = myString.match(regExp); // Cat
+```
+
+## Global
+
+```js
+const twinkleStar = "Twinkle, twinkle, little star";
+const starRegex = /twinkle/gi; // g – search all the elements
+const result = twinkleStar.match(starRegex); // [ 'Twinkle', 'twinkle' ]
+```
+
+## Period
+
+```js
+const humStr = "I'll hum a song";
+const hugStr = "Bear hug";
+const huRegex = /hu./; // . – period, match any single character
+humStr.match(huRegex); // ["hum"]
+hugStr.match(huRegex); // ["hug"]
+```
+
+```js
+const exampleStr = "Let's have fun with regular expressions!";
+const unRegex = /.un/;
+const result = unRegex.test(exampleStr); // true
+```
+
+## Open and close brackets
+
+```js
+const bgRegex = /b[aiu]g/; // [] – match a single character in a range
+```
+
+```js
+const quoteSample1 =
+  "Beware of bugs in the above code; I have only proved it correct, not tried it.";
+const vowelRegex = /[aeiou]/gi;
+const firstResult = quoteSample1.match(bgRegex); // [bug]
+const secondResult = quoteSample1.match(vowelRegex); // ["e", "a", "e", "o", "u", "i", "e", "a", "o", "e", "o", "e", "I", "a", "e", "o", "o", "e", "i", "o", "e", "o", "i", "e", "i"]
+```
+
+```js
+const quoteSample = "The quick brown fox jumps over the lazy dog.";
+const alphabetRegex = /[a-z]/gi; // the range of the symbolls
+const result = quoteSample.match(alphabetRegex); // ["T", "h", "e", "q", "u", "i", "c", "k", "b", "r", "o", "w", "n", "f", "o", "x", "j", "u", "m", "p", "s", "o", "v", "e", "r", "t", "h", "e", "l", "a", ...]
+```
+
+```js
+const quoteSample = "Blueberry 3.141592653s are delicious.";
+const myRegex1 = /[2-6h-s]/gi;
+const result = quoteSample.match(myRegex1); // ["l", "r", "r", "3", "4", "5", "2", "6", "5", "3", "s", "r", "l", "i", "i", "o", "s"]
+```
+
+## Negated set
+
+```js
+const quoteSample = "3 blind mice.";
+const myRegex = /[^0-9aeiou]/gi; // ^ – match any character that is not in the set
+const result = quoteSample.match(myRegex); // [" ", "b", "l", "n", "d", " ", "m", "c", "."]
+```
+
+## Plus
+
+```js
+const difficultSpelling = "Mississipssspis";
+const myRegex = /s+/g; // + – matches 1 or more of the preceding token.
+const result = difficultSpelling.match(myRegex); // ["ss", "ss", "sss", "s"]
+```
+
+## Star
+
+```js
+const soccerWord = "gooooooooal!";
+const gPhrase = "gut feeling";
+const oPhrase = "over the moon";
+const goRegex = /go*/; // * – matches 0 or more of the preceding token.
+soccerWord.match(goRegex); // Returns ["goooooooo"]
+gPhrase.match(goRegex); // Returns ["g"]
+oPhrase.match(goRegex); // Returns null
+```
+
+## Lazy
+
+```js
+const text = "<h1>Winter is coming</h1>";
+const myLazyRegex1 = /<._>/;
+const myLazyRegex2 = /<._?>/; // ? – Makes the preceding quantifier lazy, causing it to match as few characters as possible. By default, quantifiers are greedy, and will match as many characters as possible.
+const lazyResult1 = text.match(myLazyRegex1); // "<h1>Winter is coming</h1>"
+const lazyResult2 = text.match(myLazyRegex2); // "<h1>"
+```
+
+## Beginnig
+
+```js
+const rickyAndCal1 = "Cal and Ricky both like racing.";
+const rickyAndCal2 = " and Ricky both like racing. Cal";
+const calRegex = /^Cal/; // ^ – Matches the beginning of the string, or the beginning of a line if the multiline flag (m) is enabled. This matches a position, not a character.
+const beginningResult1 = calRegex.test(rickyAndCal1); // false
+const beginningResult2 = calRegex.test(rickyAndCal2); // true
+```
+
+## End
+
+```js
+const caboose = "The last car on a train is the caboose";
+const lastRegex = /caboose$/; // $ – Matches the end of the string, or the end of a line if the multiline flag (m) is enabled. This matches a position, not a character.
+const endResult = lastRegex.test(caboose); // true
+```
+
+## Word
+
+```js
+const quoteSample = "The five boxing wizards jump quickly 00.";
+const alphabetRegexV2 = /\w/g; // /w – Matches any word character (alphanumeric & underscore). Only matches low-ascii characters (no accented or non-roman characters). Equivalent to [A-Za-z0-9_]
+const wordsResult = quoteSample.match(alphabetRegexV2).length; //33
+```
