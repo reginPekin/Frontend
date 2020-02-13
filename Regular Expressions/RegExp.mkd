@@ -91,7 +91,7 @@ oPhrase.match(goRegex); // Returns null
 ```js
 const text = "<h1>Winter is coming</h1>";
 const myLazyRegex1 = /<._>/;
-const myLazyRegex2 = /<._?>/; // ? – Makes the preceding quantifier lazy, causing it to match as few characters as possible. By default, quantifiers are greedy, and will match as many characters as possible.
+const myLazyRegex2 = /<._?>/; // ? – makes the preceding quantifier lazy, causing it to match as few characters as possible. By default, quantifiers are greedy, and will match as many characters as possible.
 const lazyResult1 = text.match(myLazyRegex1); // "<h1>Winter is coming</h1>"
 const lazyResult2 = text.match(myLazyRegex2); // "<h1>"
 ```
@@ -101,7 +101,7 @@ const lazyResult2 = text.match(myLazyRegex2); // "<h1>"
 ```js
 const rickyAndCal1 = "Cal and Ricky both like racing.";
 const rickyAndCal2 = " and Ricky both like racing. Cal";
-const calRegex = /^Cal/; // ^ – Matches the beginning of the string, or the beginning of a line if the multiline flag (m) is enabled. This matches a position, not a character.
+const calRegex = /^Cal/; // ^ – matches the beginning of the string, or the beginning of a line if the multiline flag (m) is enabled. This matches a position, not a character.
 const beginningResult1 = calRegex.test(rickyAndCal1); // false
 const beginningResult2 = calRegex.test(rickyAndCal2); // true
 ```
@@ -110,7 +110,7 @@ const beginningResult2 = calRegex.test(rickyAndCal2); // true
 
 ```js
 const caboose = "The last car on a train is the caboose";
-const lastRegex = /caboose$/; // $ – Matches the end of the string, or the end of a line if the multiline flag (m) is enabled. This matches a position, not a character.
+const lastRegex = /caboose$/; // $ – matches the end of the string, or the end of a line if the multiline flag (m) is enabled. This matches a position, not a character.
 const endResult = lastRegex.test(caboose); // true
 ```
 
@@ -118,6 +118,129 @@ const endResult = lastRegex.test(caboose); // true
 
 ```js
 const quoteSample = "The five boxing wizards jump quickly 00.";
-const alphabetRegexV2 = /\w/g; // /w – Matches any word character (alphanumeric & underscore). Only matches low-ascii characters (no accented or non-roman characters). Equivalent to [A-Za-z0-9_]
+const alphabetRegexV2 = /\w/g; // \w – matches any word character (alphanumeric & underscore). Only matches low-ascii characters (no accented or non-roman characters). Equivalent to [A-Za-z0-9_]
 const wordsResult = quoteSample.match(alphabetRegexV2).length; //33
+```
+
+## Not word
+
+```js
+const quoteSample = "The five boxing wizards jump quickly.";
+const nonAlphabetRegex = /\W/g; // \W – matches any character that is not a word character (alphanumeric & underscore). Equivalent to [^A-Za-z0-9_]
+const result = quoteSample.match(nonAlphabetRegex); // [" ", " ", " ", " ", " ", "."]
+```
+
+## Digit
+
+```js
+const numString = "Your sandwich will be $5.00";
+const numRegex = /\d/g; // \d – matches any digit character (0-9). Equivalent to [0-9].
+const result = numString.match(numRegex);
+console.log(result); // ["5", "0", "0"]
+```
+
+## Not digit
+
+```js
+const numString = "Your sandwich will be $5.00";
+const noNumRegex = /\D/g; // \D – matches any character that is not a digit character (0-9). Equivalent to [^0-9].
+const result = numString.match(noNumRegex).length; // 24
+```
+
+## Whitespace
+
+```js
+const sample = "Whitespace is important in separating words";
+const countWhiteSpace = /\s/g; // \s – matches any whitespace character (spaces, tabs, line breaks).
+const result = sample.match(countWhiteSpace); // [" ", " ", " ", " ", " "]
+```
+
+## Not whitespace
+
+```js
+const sample = "Whitespace is important in separating words";
+const countWhiteSpace = /\S/g; // \S – Matches any character that is not a whitespace character (spaces, tabs, line breaks).
+const result = sample.match(countWhiteSpace).length; // 38
+```
+
+## Quantifier
+
+```js
+/*
+1) If there are numbers, they must be at the end.
+2) Letters can be lowercase and uppercase.
+3) At least two characters long. Two-letter names can't have numbers.
+*/
+
+const username = "J333423";
+const userCheck = /^[A-Za-z]{2,}\d*$/; // {} – matches the specified quantity of the previous token. {1,3} will match 1 to 3. {3} will match exactly 3. {3,} will match 3 or more.
+const result = userCheck.test(username); //true
+```
+
+```js
+const myString = "Ohhhhh no";
+const refExp = /Oh{5} no/;
+const result = refExp.test(myString); // true
+```
+
+## Optional
+
+```js
+const favWord = "favorite";
+const favRegex = /favou?rite/; // ? – matches 0 or 1 of the preceding token, effectively making it optional.
+const result = favRegex.test(favWord); // true
+```
+
+## Positive and negative Lookahead
+
+```js
+const quit = "qu";
+const noquit = "qt";
+const quRegex = /q(?=u)/; // ?= – matches a group after the main expression without including it in the result.
+const qRegex = /q(?!u)/; // ?! – specifies a group that can not match after the main expression (if it matches, the result is discarded)
+quit.match(quRegex); // Returns ["q"]
+noquit.match(qRegex); // Returns ["q"]
+```
+
+```js
+const sampleWord = "astronaut";
+const pwRegex = /(?=\w{5})(?=\D*\d{2})/;
+const result = pwRegex.test(sampleWord); // false
+```
+
+## Numeric reference
+
+```js
+const repeatStr = "regex regex";
+const repeatRegex = /(\w+)\s\1/; // \1 – Matches the results of a capture group. For example \1 matches the results of the first capture group & \3 matches the third.
+repeatRegex.test(repeatStr); // true
+repeatStr.match(repeatRegex); // ["regex regex", "regex"]
+```
+
+```js
+const repeatNum = "42 42 42";
+const reRegex = /^(\d+)\s\1\s\1$/;
+const result = repeatNum.match(reRegex); // ["42 42 42", "42"]
+```
+
+## Replace
+
+```js
+const wrongText = "The sky is silver.";
+const silverRegex = /silver/;
+wrongText.replace(silverRegex, "blue");
+// Returns "The sky is blue."
+```
+
+```js
+"Code Camp".replace(/(\w+)\s(\w+)/, "$2 $1");
+// Returns "Camp Code"
+```
+
+## Remove whitespace from the Start and End
+
+```js
+const hello = "   Hello, World!  ";
+const wsRegex = /^\s+|\s+$/g;
+const result = hello.replace(wsRegex, ""); // Hello, World!
 ```
