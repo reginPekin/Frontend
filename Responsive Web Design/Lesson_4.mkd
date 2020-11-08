@@ -1,4 +1,4 @@
-## Lesson 3: Common Responsive Pattern## Lesson 3: Common Responsive Pattern
+## Lesson 3: Common Responsive Pattern
 
 ### Pattern - Column Drop
 
